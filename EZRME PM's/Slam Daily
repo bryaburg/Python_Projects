@@ -1,0 +1,24 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+import keyboard
+
+#Ask for ICW Number 
+#WO_Number= input("Enter WO Number")
+
+#make Webpage 
+#details = (f"https://portal.ez.na.rme.logistics.a2z.com/work-orders/{WO_Number}/details")
+
+details = ("https://portal.ez.na.rme.logistics.a2z.com/login")
+
+#I think opens chrome XD 
+driver = webdriver.Chrome()
+
+#Get Webpage and launches it.
+driver.get(details)
+
+time.sleep(3)
+
+#trying to find element for button 
+Sign_In = driver.find_element(By.XPATH,'//*[@id="button"]/span[2]').click()
+
