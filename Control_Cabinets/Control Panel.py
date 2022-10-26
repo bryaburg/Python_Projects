@@ -14,7 +14,7 @@ def simple_read_tag():
 def simple_write_tag():
     with PLC() as comm:
         comm.IPAddress = PLCIP
-        Tag_Name = input("Tag Name", )
+        Tag_Name = input("Tag Name",  )
         comm.Write(Tag_Name, 10)
 
 
@@ -50,3 +50,5 @@ def save_tag_list():
     with open('tag_list.txt', 'w') as f:
         for t in tags.Value:
             f.write('%s %d \n'.format(t.TagName, t.DataType))
+            print(t.TagName)
+
