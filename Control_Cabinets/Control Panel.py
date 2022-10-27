@@ -52,3 +52,10 @@ def save_tag_list():
             f.write('%s %d \n'.format(t.TagName, t.DataType))
             print(t.TagName)
 
+def get_module_properties():
+    with PLC() as comm:
+        comm.IPAddress = PLCIP
+        prop = comm.GetModuleProperties(0)
+        print(prop.Value.ProductName, prop.Value.Revision)
+
+get_module_properties()
