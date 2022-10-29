@@ -48,7 +48,7 @@ keyboard.press_and_release("enter")
 
 #DESCRIPTION OF HAZARDOUS SITUATION
 DESCRIPTION_OF_HAZARDOUS_SITUATION = driver.find_element(By.XPATH,'//*[@id="textarea_DESCRIPTION OF HAZARDOUS SITUATION"]').click()
-keyboard.write("I slipped on stairs walking down them")
+keyboard.write("Found some straps on the floor")
 
 #STATE OF MIND*
 STATE_OF_MIND = driver.find_element(By.XPATH,'//*[@id="nJeQzLz"]/div[2]/div/div[1]').click()
@@ -67,7 +67,7 @@ keyboard.press_and_release("enter")
 
 #HOW IT COULD BE WORSE
 HOW_IT_COULD_BE_WORSE = driver.find_element(By.XPATH,'//*[@id="textarea_HOW IT COULD BE WORSE"]').click()
-keyboard.write("I could have broken my leg")
+keyboard.write("Could have tripped and fallen over the straps")
 
 #IMMEDIATE ACTION RESULT
 IMMEDIATE_ACTION_RESULT = driver.find_element(By.XPATH,'//*[@id="WAJn6wQ"]/div[2]/div/div[1]').click()
@@ -76,7 +76,7 @@ keyboard.press_and_release("enter")
 
 #IMMEDIATE ACTION
 IMMEDIATE_ACTION = driver.find_element(By.XPATH,'//*[@id="textarea_IMMEDIATE ACTION"]').click()
-keyboard.write("Proceeded to watch my steps and be more slow")
+keyboard.write("Moved straps off the floor")
 
 #Summit 
 Summit = driver.find_element(By.XPATH,'//*[@id="root"]/div/div/div/section[2]/div/div/form/div[27]/button/span').click()
