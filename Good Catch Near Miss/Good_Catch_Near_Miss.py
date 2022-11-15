@@ -1,5 +1,8 @@
 from datetime import datetime
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromiumService
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
@@ -8,8 +11,9 @@ import time
 import calendar
 import keyboard
 
+
 #start webdriver.
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
 #Pull we address.
 driver.get("https://app.smartsheet.com/b/form/f9293e40f29343108d1b37a5fb831bca")
