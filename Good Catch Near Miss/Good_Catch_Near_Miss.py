@@ -31,7 +31,7 @@ driver = webdriver.Chrome(chrome_options = options, executable_path=r"C:\Users\b
 driver.get("https://app.smartsheet.com/b/form/f9293e40f29343108d1b37a5fb831bca")
 
 #wait 3 secs 
-time.sleep(5)
+time.sleep(3)
 
 #Find Date Element and click.
 current_day = datetime.date.today()
