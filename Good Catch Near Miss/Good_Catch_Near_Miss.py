@@ -5,27 +5,43 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.common.by import By
+import chromedriver_autoinstaller
 import datetime
 import time
 import calendar
 import keyboard
 import random
 
+
+
 #Good Catch near miss options
 Near_miss = [
 (" Slipped on stairway.", "Could have fallen and broke ankle", "Continued to watch my steps and have 3 points of contact"), 
 ("Found some straps on the floor","Could have tripped over straps", "Picked up straps"),
 ("Cardboard fallen off decant line", "Could have tripped over fallen clutter", "Put box back on line"),
-(" Pallet not in 5s area", "Could have tripped over pallet", "Got a associate to move it correctly")
-]
+(" Pallet not in 5s area", "Could have tripped over pallet", "Got a associate to move it correctly"),
+("Water was dripping from the ceiling, creating a slip hazard. , Someone could have walked through it without noticing and slipped. , Put a bucket in place to catch the water and notified Safety Dept."),
+("Associate was walking very fast with untied shoes, creating a trip hazard. , The associate could've tripped and been injured. , Stopped the associate with a stern voice and alerted them of their untied shoe."), 
+("Tripping hazard: electrical cord was strewn across walkway. , Someone could've tripped over it and been injured. , I saw the temporary appliance that the cord was going to, unplugged the cord, and routed it in such a way so as to power it while keeping the cord off of the main path."),
+("Label tape laying on the stairs to the SLAM lines posed a slipping hazard. , If an associate had stepped on this unknowingly, they could've slipped on the stairs and been seriously injured. , I picked up the label tape and observed the area for any other debris."),
+("Tech only partially taped off area around control panel before working on it. , Another associate could've unknowingly gotten past the red tape and been in the restriced area, putting themselves at risk for the hazards therein. , I alerted the tech to the situation and proceeded to tape the remaining gap in the perimeter, securing off the area."),
+("Tech was not wearing safety gloves while using a Wave lift. , They could've grazed their hand during the course of their work. , I alerted the tech of the problem and they remediated the situation by taking their gloves out of their pocket and putting them on."),
+("Tech was walking off of the green mile without their glasses. , They had put themselves at risk of flying debris from the overhead conveyor belts. , Told the tech to put their glasses on and they did."),
+("Associate was applying anti-adhesive to the SLAM line rollers without wearing latex gloves. , If their hands had open wounds, the chemicals in the wipes would've burned their hands. , I showed the associate where the latex gloves were and had them wash hands and put the gloves on before returning to work."), 
+("Associate was staging wood pallets without wearing gloves. , They could've got splinters in their hands. , I warned the associate and they put on their gloves."),
+("Car in the parking lot almost backed into a person walking who was looking at their phone. , They could've been seriously injured if the driver was going faster and paying less attention. , I stopped both groups and had a talk with them about parking lot safety.")]
 
 #Pick from random list
 random_near_miss = random.choice(Near_miss)
 
-#start webdriver.
-options = Options()
-options.binary_location = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-driver = webdriver.Chrome(chrome_options = options, executable_path=r"C:\Users\bryaburg\Desktop\Python Projects\Python_Projects\Good Catch Near Miss\chromedriver.exe")
+#Updates chromedriver as needed
+chromedriver_autoinstaller.install()
+
+#Is showing webdriver where chrome and chromedriver is located
+options = webdriver.ChromeOptions()
+options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+chrome_driver_binary = r"C:\Users\bryaburg\Desktop\Python_Projects\Python_Projects\Good Catch Near Miss\chromedriver.exe"
+driver = webdriver.Chrome(chrome_driver_binary, chrome_options=options)
 
 #Pull we address.
 driver.get("https://app.smartsheet.com/b/form/f9293e40f29343108d1b37a5fb831bca")
