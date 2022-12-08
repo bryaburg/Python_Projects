@@ -25,6 +25,11 @@ def download_slam_data(csv_url):
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv")
 
+    with pd.ExcelWriter("C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx") as writer:
+        df.to_excel(writer,sheet_name=("DATA"), startrow=0, startcol=0, index=False, header=False)
+    
+
+
 
 download_slam_data(goog_url)
 
