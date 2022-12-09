@@ -29,7 +29,17 @@ Near_miss = [
 ("Tech was walking off of the green mile without their glasses." , "They had put themselves at risk of flying debris from the overhead conveyor belts." , "Told the tech to put their glasses on and they did."),
 ("Associate was applying anti-adhesive to the SLAM line rollers without wearing latex gloves. , If their hands had open wounds, the chemicals in the wipes would've burned their hands." , "I showed the associate where the latex gloves were and had them wash hands and put the gloves on before returning to work."), 
 ("Associate was staging wood pallets without wearing gloves." , "They could've got splinters in their hands." , "I warned the associate and they put on their gloves."),
-("Car in the parking lot almost backed into a person walking who was looking at their phone." , "They could've been seriously injured if the driver was going faster and paying less attention." , "I stopped both groups and had a talk with them about parking lot safety.")]
+("Car in the parking lot almost backed into a person walking who was looking at their phone." , "They could've been seriously injured if the driver was going faster and paying less attention." , "I stopped both groups and had a talk with them about parking lot safety."),
+("Slipped on a piece of wood from a pallet."), ("Myself or someone else could have fallen and been seriously injured."), ("I picked up the piece of wood and properly disposed of it."),
+("Tripped going up the stairs to mezzanine because I was distracted."), ("I could have fallen down the stairs and seriously injured myself."), ("I focused on where I was going to avoid tripping again."),
+("I found a roller on an elevated conveyor that was at risk of falling."), ("It could have fallen on someone, causing serious injury."), ("I immediately put up danger tape around the affected area and replaced the roller as soon as I was able to."),
+("Found a stack of folded boxes that had fallen across the green mile."), ("Someone could have tripped and gotten hurt."), ("I picked up the boxes and stacked them out of the way."),
+("Stopped an unauthorized associate who was about to reach onto the AR floor to pick up some amnesty."), ("They could have been terminated for breaking amazon's safety rules, or worse, they could have been injured."), ("Spoke to the associate about why they shouldn't reach onto the AR floor, and I also brought the issue to the associate's manager."),
+("Found an unburied pallet jack unattended on the green mile."), ("Someone could have tripped on it and been injured."), ("I took the pallet jack and properly buried it in a pallet"),
+("Found a bag of popcorn kernels that had broken open on a walkway."), ("Someone could have slipped and fallen."), ("Used a broom and dustpan to sweep up the kernels."),
+("There was an empty cardboard roll laying on the floor."), ("Somebody could have stepped on it and fallen."), ("Picked it up off of the floor and threw it away."),
+("Found a pod on the AR floor that was missing hardware causing it to tip dangerously."), ("It could have tipped over onto someone."), ("Removed the items from the pod and carefully removed it from the floor."),
+("Found a section of netting on an elevated conveyor that was badly torn."), ("An item could have fallen through the torn section and hit someone."), ("I used zip ties to repair the damaged section."),]
 
 #Pick from random list
 random_near_miss = random.choice(Near_miss)
