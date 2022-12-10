@@ -7,17 +7,15 @@ PLCIP = input("PLC IP Address", )
 def simple_read_tag():
     with PLC() as comm:
         comm.IPAddress = PLCIP
-        Tag_Name = input("Tag Name", )
+        Tag_Name = input("HMI_Start")
         ret = comm.Read(Tag_Name)
-    print(ret.Value)
+    print(ret.TagName, ret.Value, ret.Status)
 
 def simple_write_tag():
     with PLC() as comm:
-        comm.IPAddress = PLCIP
-        Tag_Name = input("Tag Name",  )
-        comm.Write(Tag_Name, 10)
-
-
+        ret = comm.Write("COMMAND_FREQ", 7500)
+    print(ret.TagName, ret.Value, ret.Status)
+    
 def get_controller_tag_list():
     with PLC() as comm:
         comm.IPAddress = PLCIP
@@ -58,4 +56,4 @@ def get_module_properties():
         prop = comm.GetModuleProperties(0)
         print(prop.Value.ProductName, prop.Value.Revision)
 
-get_module_properties()
+simple_write_tag()
