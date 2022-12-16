@@ -26,9 +26,12 @@ details = ("https://portal.ez.na.rme.logistics.a2z.com/login")
 
 #Get Webpage and launches it.
 driver.get(details)
+driver.maximize_window()
 
 time.sleep(3)
 
 #trying to find element for button 
-Sign_In = driver.find_element(By.CLASS_NAME,'mdc-button mdc-button--raised"]').click()
+shadow_root = driver.find_element(By.TAG_NAME, "ez-rme-app") #Shadow Host
+
+nested_element = shadow_root.find_element(By.TAG_NAME, "ez-login-page")
 
