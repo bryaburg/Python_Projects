@@ -31,7 +31,9 @@ driver.maximize_window()
 time.sleep(3)
 
 #trying to find element for button 
-shadow_root = driver.find_element(By.TAG_NAME, "ez-rme-app") #Shadow Host
+shadow_host1 = driver.find_element(By.TAG_NAME, "ez-rme-app") #Shadow Host
+shadow_root1 = driver.execute_script('return arguments[0].shadowRoot', shadow_host1)
 
-nested_element = shadow_root.find_element(By.TAG_NAME, "ez-login-page")
+shadow_host2 = shadow_host1.find_element(By.TAG_NAME, "ez-login-page")
+shadow_root2 = driver.execute_script('return arguments[0].shadowRoot', shadow_host2)
 
