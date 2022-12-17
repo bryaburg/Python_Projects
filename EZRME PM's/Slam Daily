@@ -24,10 +24,6 @@ driver = webdriver.Chrome(chrome_driver_binary, chrome_options=options)
 
 details = ("https://portal.ez.na.rme.logistics.a2z.com/login")
 
-def expand_shadow_element(element):
-  shadow_root = driver.execute_script('return arguments[0].shadowRoot', element)
-  return shadow_root
-
 #Get Webpage and launches it.
 driver.get(details)
 driver.maximize_window()
