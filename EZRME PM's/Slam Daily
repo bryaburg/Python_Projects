@@ -24,6 +24,10 @@ driver = webdriver.Chrome(chrome_driver_binary, chrome_options=options)
 
 details = ("https://portal.ez.na.rme.logistics.a2z.com/login")
 
+def expand_shadow_element(element):
+  shadow_root = driver.execute_script('return arguments[0].shadowRoot', element)
+  return shadow_root
+
 #Get Webpage and launches it.
 driver.get(details)
 driver.maximize_window()
@@ -31,9 +35,6 @@ driver.maximize_window()
 time.sleep(3)
 
 #trying to find element for button 
-shadow_host1 = driver.find_element(By.TAG_NAME, "ez-rme-app") #Shadow Host
-shadow_root1 = driver.execute_script('return arguments[0].shadowRoot', shadow_host1)
 
-shadow_host2 = shadow_host1.find_element(By.TAG_NAME, "ez-login-page")
-shadow_root2 = driver.execute_script('return arguments[0].shadowRoot', shadow_host2)
-
+search_button = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("mwc-button").shadowRoot.querySelector("button")')
+search_button.click()
