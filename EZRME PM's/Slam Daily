@@ -34,7 +34,9 @@ driver.maximize_window()
 
 time.sleep(3)
 
-#trying to find element for button 
+# Signing into EZRME 
+sign_in_as_amazon_employee = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("mwc-button").shadowRoot.querySelector("button")')
+sign_in_as_amazon_employee.click()
 
-search_button = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("mwc-button").shadowRoot.querySelector("button")')
-search_button.click()
+sso_login = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("ez-credential-card").shadowRoot.querySelector("button")')
+sso_login.click()
