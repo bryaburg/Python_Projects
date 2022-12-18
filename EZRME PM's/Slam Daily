@@ -1,11 +1,10 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromiumService
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.utils import ChromeType
-from selenium.webdriver.common.by import By
 import chromedriver_autoinstaller
 import time
 import keyboard
+
+#Ask for ICW Number 
+WO_Number= input("Enter WO Number")
 
 #Updates chromedriver as needed
 chromedriver_autoinstaller.install()
@@ -16,13 +15,8 @@ options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.ex
 chrome_driver_binary = r"C:\Users\bryaburg\Desktop\Python_Projects\Python_Projects\EZRME PM's\chromedriver.exe"
 driver = webdriver.Chrome(chrome_driver_binary, chrome_options=options)
 
-#Ask for ICW Number 
-#WO_Number= input("Enter WO Number")
-
 #make Webpage 
-#details = (f"https://portal.ez.na.rme.logistics.a2z.com/work-orders/{WO_Number}/details")
-
-details = ("https://portal.ez.na.rme.logistics.a2z.com/login")
+details = (f"https://portal.ez.na.rme.logistics.a2z.com/work-orders/{WO_Number}/details")
 
 #Get Webpage and launches it.
 driver.get(details)
@@ -34,5 +28,8 @@ time.sleep(3)
 sign_in_as_amazon_employee = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("mwc-button").shadowRoot.querySelector("button")')
 sign_in_as_amazon_employee.click()
 
-sso_login = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("ez-credential-card").shadowRoot.querySelector("button")')
+sso_login = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("ez-credential-card").querySelector("mwc-button")')
 sso_login.click()
+
+time.sleep(10)
+
