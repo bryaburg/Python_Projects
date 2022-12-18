@@ -31,5 +31,16 @@ sign_in_as_amazon_employee.click()
 sso_login = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("ez-credential-card").querySelector("mwc-button")')
 sso_login.click()
 
-time.sleep(10)
+time.sleep(5)
 
+#Click PTP Button
+ptp_button = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-menu").shadowRoot.querySelectorAll("ez-menu-item")[1]')
+ptp_button.click()
+
+time.sleep(5)
+
+#Fill out PTP with no hazards
+new_assessment = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-ptw-pilot").shadowRoot.querySelector("ez-work-order-ptp-page").shadowRoot.querySelector("mwc-button")')
+new_assessment.click()
+
+time.sleep(5)
