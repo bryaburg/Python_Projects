@@ -1,5 +1,6 @@
 from selenium import webdriver
 import chromedriver_autoinstaller
+from selenium.common.exceptions import NoSuchElementException
 import time
 import keyboard
 
@@ -8,6 +9,13 @@ WO_Number= input("Enter WO Number")
 
 #Closing Comments
 Closing_Comments = ("I am very pleased to report that I have completed everything on my task list and found no issues. All systems are functioning as intended and there are no outstanding issues that need to be addressed. I will continue to monitor the systems closely and address any issues that may arise.")
+
+
+# Set a flag to indicate whether the element has been found
+element_found = False
+
+# Set a counter to keep track of the number of attempts
+attempts = 0
 
 #Updates chromedriver as needed
 chromedriver_autoinstaller.install()
@@ -25,17 +33,34 @@ details = (f"https://portal.ez.na.rme.logistics.a2z.com/work-orders/{WO_Number}/
 driver.get(details)
 driver.maximize_window()
 
-time.sleep(3)
-
 # Signing into EZRME 
-sign_in_as_amazon_employee = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("mwc-button").shadowRoot.querySelector("button")')
+while not element_found and attempts < 10:
+    try:
+        # Look for the element on the page
+        sign_in_as_amazon_employee = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("mwc-button").shadowRoot.querySelector("button")')
+
+
+        # If the element is found, set the flag to True to exit the loop
+        element_found = True
+    except NoSuchElementException:
+        # If the element is not found, wait for a second and try again
+        time.sleep(1)
+        attempts += 1
 sign_in_as_amazon_employee.click()
 
-sso_login = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("ez-credential-card").querySelector("mwc-button")')
+while not element_found and attempts < 10:
+    try:
+        # Look for the element on the page
+        sso_login = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-login-page").shadowRoot.querySelector("ez-login").shadowRoot.querySelector("ez-credential-card").querySelector("mwc-button")')
+
+        # If the element is found, set the flag to True to exit the loop
+        element_found = True
+    except NoSuchElementException:
+        # If the element is not found, wait for a second and try again
+        time.sleep(1)
+        attempts += 1
 sso_login.click()
-
-time.sleep(5)
-
+'''
 #Click PTP Button
 ptp_button = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-menu").shadowRoot.querySelectorAll("ez-menu-item")[1]')
 ptp_button.click()
@@ -173,3 +198,4 @@ Save = driver.execute_script('return document.querySelector("ez-rme-app").shadow
 Save.click
 
 time.sleep(5)
+'''
