@@ -65,6 +65,8 @@ while not element_found and attempts < 10:
         attempts += 1
 sso_login.click()
 
+time.sleep(5)
+
 #Click PTP Button
 # Set a flag to indicate whether the element has been found
 element_found = False
@@ -85,6 +87,8 @@ while not element_found and attempts < 10:
         attempts += 1
 ptp_button.click()
 
+time.sleep(5)
+
 #Fill out PTP with no hazards
 # Set a flag to indicate whether the element has been found
 element_found = False
@@ -104,6 +108,8 @@ while not element_found and attempts < 10:
         time.sleep(1)
         attempts += 1
 new_assessment.click()
+
+time.sleep(5)
 
 # Set a flag to indicate whether the element has been found
 element_found = False
