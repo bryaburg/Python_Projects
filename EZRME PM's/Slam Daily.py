@@ -75,7 +75,7 @@ attempts = 0
 while not element_found and attempts < 10:
     try:
         # Look for the element on the page
-        ptp_button = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelectorAll("div")[1].querySelector("main").querySelector("ez-work-order-page").shadowRoot.querySelectorAll("div")[0].querySelector("ez-menu").shadowRoot.querySelectorAll("ez-menu-item")[1].shadowRoot.querySelectorAll("div")[0].querySelector("span")')
+        ptp_button = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-menu").shadowRoot.querySelectorAll("ez-menu-item")[1]')
 
         # If the element is found, set the flag to True to exit the loop
         element_found = True
