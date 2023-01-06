@@ -98,10 +98,7 @@ timeout = 10  # timeout in seconds
 
 # Try executing the script and checking for the element every 0.5 seconds
 for i in range(int(timeout * 2)):
-    try:
-        loading_page = WebDriverWait(driver,30).until(EC.visibility_of_element_located((By.XPATH,"ez-rme-app")))
-    finally:
-        element = driver.execute_script(ptp_button)
+    loading_page = WebDriverWait(driver,30).until(EC.visibility_of_any_elements_located((By.XPATH,"/html/body/ez-rme-app"))), driver.execute_script(ptp_button)
         
     if element is not None:
         break
