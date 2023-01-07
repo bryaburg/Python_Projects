@@ -24,12 +24,14 @@ def download_slam_data(csv_url):
         print(my_list)
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv")
-
-    with pd.ExcelWriter("C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx") as writer:
-        df.to_excel(writer,sheet_name=("DATA"), startrow=0, startcol=0, index=False, header=False)
     
+# Read the CSV file
+df = pd.read_csv('SLAM_file.csv')
 
-
+# Open the existing Excel file
+with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a') as writer:
+    # Write the data to the specified sheet
+    df.to_excel(writer, index=False, sheet_name='DATA')
 
 download_slam_data(goog_url)
 
