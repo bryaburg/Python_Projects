@@ -18,19 +18,18 @@ def download_slam_data(csv_url):
 
     decoded_csv = download.content.decode('utf-8')
 
-    cr = csv.reader(decoded_csv.splitlines(), delimiter=',')
+    cr = pd.read_csv(decoded_csv,skiprows=1, header=None)
     my_list = list(cr)
-    for row in my_list:
-        print(my_list)
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv")
     
 # Read the CSV file
-df = pd.read_csv('SLAM_file.csv')
+    df = pd.read_csv('SLAM_file.csv')
+    df = df.iloc[1:]
 
 # Open the existing Excel file
-with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
-    # Write the data to the specified sheet
-    df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
+    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
+        # Write the data to the specified sheet
+        df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
 
 download_slam_data(goog_url)
