@@ -1,11 +1,7 @@
 from selenium import webdriver
 import chromedriver_autoinstaller
-from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import time
-import keyboard
 
 #Ask for ICW Number 
 WO_Number= input("Enter WO Number")
@@ -93,13 +89,13 @@ else:
     print("Element not found.")
     
 #Clicking the PTP Page
-    
+
 timeout = 10  # timeout in seconds
 
 # Try executing the script and checking for the element every 0.5 seconds
 for i in range(int(timeout * 2)):
-    loading_page = WebDriverWait(driver,30).until(EC.visibility_of_any_elements_located((By.XPATH,"/html/body/ez-rme-app"))), driver.execute_script(ptp_button)
-        
+    time.sleep(5)
+    element = driver.execute_script(ptp_button)
     if element is not None:
         break
     time.sleep(0.5)
@@ -109,5 +105,7 @@ if element is not None:
     element.click()
 else:
     print("Element not found.")
+    
+
 
 time.sleep(5)
