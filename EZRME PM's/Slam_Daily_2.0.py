@@ -92,19 +92,22 @@ else:
 
 timeout = 10  # timeout in seconds
 
-# Try executing the script and checking for the element every 0.5 seconds
-for i in range(int(timeout * 2)):
-    time.sleep(5)
-    element = driver.execute_script(ptp_button)
-    if element is not None:
-        break
-    time.sleep(0.5)
+attempts = 0
+while True:
+    try:
+        element = driver.execute_script(ptp_button)
+        if element is not None:
+            break
+    except:
+        attempts += 1
+        if attempts >= 5:
+            print("Timed out waiting for element to be located.")
+            break
+        time.sleep(0.5)
 
 # Click the element (if it was found)
 if element is not None:
     element.click()
-else:
-    print("Element not found.")
     
 
 
