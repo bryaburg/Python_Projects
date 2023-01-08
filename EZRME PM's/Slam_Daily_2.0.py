@@ -2,6 +2,7 @@ from selenium import webdriver
 import chromedriver_autoinstaller
 from selenium.webdriver.common.by import By
 import time
+import keyboard
 
 #Ask for ICW Number 
 WO_Number= input("Enter WO Number")
@@ -25,7 +26,7 @@ ACK_6 = 'return document.querySelector("ez-rme-app").shadowRoot.querySelector("e
 Next_1 = 'return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-ptw-pilot").shadowRoot.querySelector("ez-work-order-ptp-page").shadowRoot.querySelector("ez-survey-builder").shadowRoot.querySelectorAll("slot")[1].querySelectorAll("mwc-button")[2]'
 Yes_1 = 'return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-ptw-pilot").shadowRoot.querySelector("ez-work-order-ptp-page").shadowRoot.querySelector("ez-survey-builder").shadowRoot.querySelector("ez-survey-options").shadowRoot.querySelectorAll("div")[0].querySelector("mwc-radio")'
 Next_2 = 'return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-ptw-pilot").shadowRoot.querySelector("ez-work-order-ptp-page").shadowRoot.querySelector("ez-survey-builder").shadowRoot.querySelectorAll("slot")[1].querySelectorAll("mwc-button")[2]'
-Summit_0 = 'returndocument.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-ptw-pilot").shadowRoot.querySelector("ez-work-order-ptp-page").shadowRoot.querySelector("ez-card").querySelector("div").querySelectorAll("mwc-button")[1]'
+Summit_0 = 'return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-ptw-pilot").shadowRoot.querySelector("ez-work-order-ptp-page").shadowRoot.querySelector("ez-card").querySelector("div").querySelectorAll("mwc-button")[1]'
 Checklist = 'return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-menu").shadowRoot.querySelectorAll("ez-menu-item")[2]'
 Task_1 = 'return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-checklist").shadowRoot.querySelector("ez-work-order-eam-checklist-grid").shadowRoot.querySelector("ez-card").querySelector("vaadin-grid").querySelectorAll("vaadin-grid-cell-content")[31].querySelector("div").querySelectorAll("mwc-formfield")[0].querySelector("mwc-radio").shadowRoot.querySelector("div").querySelector("input")'
 Task_2 = 'return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-checklist").shadowRoot.querySelector("ez-work-order-eam-checklist-grid").shadowRoot.querySelector("ez-card").querySelector("vaadin-grid").querySelectorAll("vaadin-grid-cell-content")[40].querySelector("mwc-formfield").querySelector("mwc-checkbox").shadowRoot.querySelector("div").querySelector("input")'
@@ -67,7 +68,7 @@ def click_buttons(buttons):
                 break
         except:
             attempts += 1
-            if attempts >= 5:
+            if attempts >= 10:
                 print("Timed out waiting for element to be located.")
                 break
             time.sleep(0.5)
@@ -106,7 +107,39 @@ click_buttons(Yes_1)
 
 click_buttons(Next_2)
 
-click_buttons(Summit_0)
+time.sleep(1)
 
+Summit_0 = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-ptw-pilot").shadowRoot.querySelector("ez-work-order-ptp-page").shadowRoot.querySelector("ez-card").querySelectorAll("div")[0].querySelectorAll("mwc-button")[1].shadowRoot.querySelectorAll("span")[2]')
+driver.execute_script("arguments[0].click()", Summit_0)
+
+click_buttons(Checklist)
+
+click_buttons(Task_1)
+
+click_buttons(Task_2)
+
+click_buttons(Labor)
+
+click_buttons(Plus_Mark)
+
+click_buttons(Hours)
+
+keyboard.press_and_release(".")
+keyboard.press_and_release("5")
+
+click_buttons(Summit_1)
+
+click_buttons(details)
+
+click_buttons(Edit)
+
+click_buttons(Closing)
+
+click_buttons(Comment)
+Comment.send_keys(Closing_Comments)
+
+click_buttons(Submit_2)
+
+click_buttons(Save)
 
 time.sleep(5)
