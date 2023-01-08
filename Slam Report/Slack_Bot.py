@@ -25,7 +25,7 @@ requests.post(webhook_url, json=payload)
 
 To create a webhook using the Slack API, follow these steps:
 
-Go to the Slack API page and log in to your Slack account.
+Go to the https://api.slack.com/ page and log in to your Slack account.
 
 Click on the "Your Apps" button in the top right corner.
 
