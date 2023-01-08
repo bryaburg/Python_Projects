@@ -42,3 +42,21 @@ def download_slam_data_1(csv_url):
         pd.read_csv(io.StringIO(decoded_csv), index=False).to_excel(writer, sheet_name='DATA', startrow=0, startcol=0, header=False)
 
 download_slam_data(goog_url)
+
+webhook_url = "https://hooks.slack.com/services/XXX/XXX/XXX"
+
+def send_file_to_webhook(webhook_url):
+    # Open the file and read its contents
+    with open("C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx", "rb") as file:
+        file_content = file.read()
+
+    payload = {
+        "text": "Slam Report",
+        "files": [
+            {
+                "content": file_content,
+                "filename": "SLAM Report.xlsx"
+            }
+        ]
+    }
+    requests.post(webhook_url, json=payload)
