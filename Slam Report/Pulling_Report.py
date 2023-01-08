@@ -35,11 +35,11 @@ def download_slam_data(csv_url):
         # Write the data to the specified sheet
         df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
         
-def download_slam_data_1(csv_url):
+'''def download_slam_data_1(csv_url):    Testing function 
     download = requests.get(csv_url, auth=HTTPKerberosAuth(OPTIONAL), verify=False)
     decoded_csv = download.content.decode('utf-8')
     with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine='openpyxl', if_sheet_exists='replace') as writer:
-        pd.read_csv(io.StringIO(decoded_csv), index=False).to_excel(writer, sheet_name='DATA', startrow=0, startcol=0, header=False)
+        pd.read_csv(io.StringIO(decoded_csv), index=False).to_excel(writer, sheet_name='DATA', startrow=0, startcol=0, header=False)'''
 
 download_slam_data(goog_url)
 
