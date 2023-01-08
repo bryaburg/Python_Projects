@@ -2,7 +2,6 @@ from selenium import webdriver
 import chromedriver_autoinstaller
 from selenium.webdriver.common.by import By
 import time
-import keyboard
 
 #Ask for ICW Number 
 WO_Number= input("Enter WO Number")
@@ -123,9 +122,7 @@ click_buttons(Labor)
 click_buttons(Plus_Mark)
 
 click_buttons(Hours)
-
-keyboard.press_and_release(".")
-keyboard.press_and_release("5")
+Hours.send_keys(".5")
 
 click_buttons(Summit_1)
 
