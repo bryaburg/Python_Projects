@@ -26,7 +26,7 @@ def download_slam_data(csv_url):
     
 # Read the CSV file
     df = pd.read_csv('SLAM_file.csv')
-    df.drop(df.columns[0], axis=1)
+    df.drop(df.columns[0], axis=1, inplace=True)
 
 
 # Open the existing Excel file
