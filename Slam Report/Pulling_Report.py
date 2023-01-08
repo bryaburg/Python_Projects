@@ -4,6 +4,7 @@ import requests
 from requests_kerberos import HTTPKerberosAuth, OPTIONAL
 import openpyxl
 from openpyxl import load_workbook
+import io
 
 goog_url = "https://monitorportal.amazon.com/mws?Action=GetGraph&Version=2007-07-07&SchemaName1=Search&Pattern1" \
            "=marketplace%3D%24DSM5%24%20methodname%3D%24ALL%24%20metric%3DDSM5-SLAM%20%28LabelScan%20OR%20LabelZone" \
@@ -33,5 +34,11 @@ def download_slam_data(csv_url):
     with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
         # Write the data to the specified sheet
         df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
+        
+def download_slam_data_1(csv_url):
+    download = requests.get(csv_url, auth=HTTPKerberosAuth(OPTIONAL), verify=False)
+    decoded_csv = download.content.decode('utf-8')
+    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine='openpyxl', if_sheet_exists='replace') as writer:
+        pd.read_csv(io.StringIO(decoded_csv), index=False).to_excel(writer, sheet_name='DATA', startrow=0, startcol=0, header=False)
 
 download_slam_data(goog_url)
