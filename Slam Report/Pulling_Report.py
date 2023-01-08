@@ -17,15 +17,17 @@ def download_slam_data(csv_url):
     download = requests.get(csv_url, auth=HTTPKerberosAuth(OPTIONAL), verify=False)
 
     decoded_csv = download.content.decode('utf-8')
-
-    cr = pd.read_csv(decoded_csv,skiprows=1, header=None)
+    cr = csv.reader(decoded_csv.splitlines(), delimiter=',')
     my_list = list(cr)
+    for row in my_list:
+        print(my_list)
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv")
     
 # Read the CSV file
     df = pd.read_csv('SLAM_file.csv')
-    df = df.iloc[1:]
+    df.drop(df.columns[0], axis=1)
+
 
 # Open the existing Excel file
     with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
