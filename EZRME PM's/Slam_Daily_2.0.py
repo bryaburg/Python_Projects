@@ -1,6 +1,7 @@
 from selenium import webdriver
 import chromedriver_autoinstaller
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 import time
 
 #Ask for ICW Number 
@@ -56,7 +57,7 @@ details = (f"https://portal.ez.na.rme.logistics.a2z.com/work-orders/{WO_Number}/
 driver.get(details)
 driver.maximize_window()
   
-def click_buttons(buttons):
+'''def click_buttons(buttons):
     timeout = 10  # timeout in seconds
 
     attempts = 0
@@ -69,10 +70,30 @@ def click_buttons(buttons):
             break
         attempts += 1
         time.sleep(0.5)
+        
+    # Click the element (if it was found)
+    if element is not None:
+        element.click()
+'''
+
+def click_buttons(buttons):
+    timeout = 10  # timeout in seconds
+    poll_interval = 0.5  # interval between attempts in seconds
+
+    # Use a try/except block to catch the TimeoutError
+    try:
+        # Wait for the element to be present on the page
+        element = WebDriverWait(driver, timeout, poll_interval).until(
+            lambda driver: driver.execute_script(buttons) is not None
+        )
+    except TimeoutError:
+        print("Timed out waiting for element to be located.")
+        return
 
     # Click the element (if it was found)
     if element is not None:
         element.click()
+
 
 click_buttons(sign_in_as_amazon_employee)
 
