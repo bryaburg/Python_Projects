@@ -46,7 +46,7 @@ def download_slam_data(csv_url):
 download_slam_data(goog_url)
 
 
-# This will grab the xlsx file I just made and put it in webhook URL
+'''# This will grab the xlsx file I just made and put it in webhook URL
 webhook_url = "https://hooks.slack.com/services/XXX/XXX/XXX"
 
 def send_file_to_webhook(webhook_url):
@@ -65,4 +65,4 @@ def send_file_to_webhook(webhook_url):
     }
     requests.post(webhook_url, json=payload)
     
-send_file_to_webhook(webhook_url)
+#send_file_to_webhook(webhook_url)'''

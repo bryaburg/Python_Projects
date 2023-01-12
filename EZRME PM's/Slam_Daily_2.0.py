@@ -76,28 +76,11 @@ def click_buttons(buttons):
         element.click()
 
 
-'''def click_buttons(buttons):
-    timeout = 10  # timeout in seconds
-    poll_interval = 0.5  # interval between attempts in seconds
-
-    # Use a try/except block to catch the TimeoutError
-    try:
-        # Wait for the element to be present on the page
-        element = WebDriverWait(driver, timeout, poll_interval).until(
-            lambda driver: driver.execute_script(buttons) is not None
-        )
-    except TimeoutError:
-        print("Timed out waiting for element to be located.")
-        return
-
-    # Click the element (if it was found)
-    if element is not None:
-        element.click()'''
-
-
 click_buttons(sign_in_as_amazon_employee)
 
 click_buttons(sso_login)
+
+time.sleep(3)
 
 click_buttons(ptp_button)
 
@@ -125,7 +108,7 @@ click_buttons(Yes_1)
 
 click_buttons(Next_2)
 
-'''time.sleep(1)
+time.sleep(1)
 
 Summit_0 = driver.execute_script('return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-ptw-pilot").shadowRoot.querySelector("ez-work-order-ptp-page").shadowRoot.querySelector("ez-card").querySelectorAll("div")[0].querySelectorAll("mwc-button")[1].shadowRoot.querySelectorAll("span")[2]')
 driver.execute_script("arguments[0].click()", Summit_0)
@@ -156,6 +139,6 @@ Comment.send_keys(Closing_Comments)
 
 click_buttons(Submit_2)
 
-click_buttons(Save)'''
+click_buttons(Save)
 
 time.sleep(5)
