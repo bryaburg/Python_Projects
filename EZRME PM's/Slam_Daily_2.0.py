@@ -80,8 +80,6 @@ click_buttons(sign_in_as_amazon_employee)
 
 click_buttons(sso_login)
 
-time.sleep(3)
-
 click_buttons(ptp_button)
 
 click_buttons(new_assessment)

@@ -23,11 +23,15 @@ def download_slam_data(csv_url):
     for row in my_list:
         print(my_list)
     df = pd.DataFrame(my_list)
-    df.to_csv("SLAM_file.csv")
+    df.to_csv("SLAM_file.csv", header=False, index=False)
     
 # Read the CSV file and drop the first column
     df = pd.read_csv('SLAM_file.csv')
-    df.drop(df.columns[0], axis=1, inplace=True)
+    #df.drop(df.columns[0], axis=1, inplace=True)
+    s = df.loc[4:17]
+    df[s] = df[s].astype("float")
+    results = df.dtypes
+    print(results)
 
 
 # Open the existing Excel file and put in csv data
