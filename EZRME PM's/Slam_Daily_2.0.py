@@ -59,6 +59,24 @@ driver.maximize_window()
   
 def click_buttons(buttons):
     timeout = 10  # timeout in seconds
+    element = None
+    for i in range(5):
+        try:
+            element = driver.execute_script(buttons)
+            if element is not None:
+                break
+        except:
+            pass
+        time.sleep(0.5)
+    else:
+        print("Timed out waiting for element to be located.")
+
+    if element is not None:
+        element.click()
+
+'''def click_buttons(buttons):
+    timeout = 10  # timeout in seconds
+    element = None
     attempts = 0
     while True:
         if attempts >= 5:
@@ -75,8 +93,7 @@ def click_buttons(buttons):
     # Click the element (if it was found)
     if element is not None:
         element.click()
-        
-#UnboundLocalError: cannot access local variable 'element' where it is not associated with a value
+'''
 
 click_buttons(sign_in_as_amazon_employee)
 
