@@ -75,6 +75,8 @@ def click_buttons(buttons):
     # Click the element (if it was found)
     if element is not None:
         element.click()
+        
+#UnboundLocalError: cannot access local variable 'element' where it is not associated with a value
 
 click_buttons(sign_in_as_amazon_employee)
 
