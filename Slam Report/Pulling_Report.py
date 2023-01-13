@@ -31,13 +31,13 @@ def download_slam_data(csv_url):
         # Read the excel file
         df = pd.read_csv('SLAM_file.csv')
         #Convert data in Dataframe to float
-        df = df.applymap(float)
+        for col in df.columns:
+            try:
+                df[col] = df[col].astype(float)
+            except ValueError:
+                pass
         # Write the data to the specified sheet
         df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
-        
-#ValueError: could not convert string to float: 'Label'
-
-
 
 download_slam_data(goog_url)
 
