@@ -34,6 +34,8 @@ def download_slam_data(csv_url):
         df = df.applymap(float)
         # Write the data to the specified sheet
         df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
+        
+#ValueError: could not convert string to float: 'Label'
 
 
 
