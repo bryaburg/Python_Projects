@@ -42,6 +42,7 @@ def download_slam_data(csv_url):
 download_slam_data(goog_url)
 
 #Now the number is stored as text I need it to be converted to number in excel file 
+#Better way to convert pandas column containing numbers stored as text to numbers
 
 
 '''# This will grab the xlsx file I just made and put it in webhook URL
