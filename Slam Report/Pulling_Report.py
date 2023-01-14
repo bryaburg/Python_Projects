@@ -41,6 +41,8 @@ def download_slam_data(csv_url):
 
 download_slam_data(goog_url)
 
+#Now the number is stored as text I need it to be converted to number in excel file 
+
 
 '''# This will grab the xlsx file I just made and put it in webhook URL
 webhook_url = "https://hooks.slack.com/services/XXX/XXX/XXX"
