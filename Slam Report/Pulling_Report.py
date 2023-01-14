@@ -37,13 +37,9 @@ def download_slam_data(csv_url):
             except ValueError:
                 pass
         # Write the data to the specified sheet
-        df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
+        df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False, convert_float=True)
 
 download_slam_data(goog_url)
-
-#Now the number is stored as text I need it to be converted to number in excel file 
-#Better way to convert pandas column containing numbers stored as text to numbers
-
 
 '''# This will grab the xlsx file I just made and put it in webhook URL
 webhook_url = "https://hooks.slack.com/services/XXX/XXX/XXX"
