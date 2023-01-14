@@ -58,9 +58,9 @@ driver.get(details)
 driver.maximize_window()
   
 def click_buttons(buttons):
-    timeout = 10  # timeout in seconds
+    timeout = 5  # timeout in seconds
     element = None
-    for i in range(5):
+    for i in range(timeout*2):
         try:
             element = driver.execute_script(buttons)
             if element is not None:
