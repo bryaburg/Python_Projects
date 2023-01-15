@@ -28,16 +28,19 @@ def download_slam_data(csv_url):
 
     # Open the existing Excel file and put in csv data
     with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
-        # Read the excel file
+    # Read the excel file
         df = pd.read_csv('SLAM_file.csv')
-        #Convert data in Dataframe to float
-        for col in df.columns:
-            try:
-                df[col] = df[col].astype(float)
-            except ValueError:
-                pass
-        # Write the data to the specified sheet
-        df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False, convert_float=True)
+    #Convert data in Dataframe to numeric
+    for col in df.columns:
+        try:
+            df[col] = pd.to_numeric(df[col])
+        except ValueError:
+            pass
+    # Formatting float columns to number format
+    df = df.applymap(lambda x: '{:.2f}'.format(x) if isinstance(x, float) else x)
+    # Write the data to the specified sheet as numbers
+    df.to_excel(writer, sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
+
         
         #TypeError: NDFrame.to_excel() got an unexpected keyword argument 'convert_float'
 
