@@ -74,27 +74,6 @@ def click_buttons(buttons):
     if element is not None:
         element.click()
 
-'''def click_buttons(buttons):
-    timeout = 10  # timeout in seconds
-    element = None
-    attempts = 0
-    while True:
-        if attempts >= 5:
-            print("Timed out waiting for element to be located.")
-            break
-        try:
-            element = driver.execute_script(buttons)
-            if element is not None:
-                break
-        except:
-            pass
-        attempts += 1
-        time.sleep(0.5)
-    # Click the element (if it was found)
-    if element is not None:
-        element.click()
-'''
-
 click_buttons(sign_in_as_amazon_employee)
 
 click_buttons(sso_login)
