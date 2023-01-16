@@ -26,34 +26,38 @@ def download_slam_data(csv_url):
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv", header=False, index=False)
     
+    from openpyxl import load_workbook
+
     # Open the existing Excel file
     book = load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
-    worksheet = book["Data"]
 
-    # clear the sheet
-    for row in worksheet.iter_rows(values_only=True):
-        worksheet.delete_rows(row[0].row,1)
+    if "DATA" in book.sheetnames:
+        worksheet = book["Data"]
+        # clear the sheet
+        for row in worksheet.iter_rows(values_only=True):
+            worksheet.delete_rows(row[0].row,1)
+        # Read the csv file
+        df = pd.read_csv('SLAM_file.csv')
 
-    # Read the csv file
-    df = pd.read_csv('SLAM_file.csv')
-
-    for col in df.columns:
-        try:
-            df[col] = pd.to_numeric(df[col], errors='coerce')
-        except ValueError:
-            pass
-
-    # Write the data to the specified sheet
-    df.to_excel(book, sheet_name='Data', startrow=0, startcol=0,  index=False, header=False)
-
-    # set the number format
-    for row in worksheet.iter_rows():
-        for cell in row:
+        for col in df.columns:
             try:
-                cell.number_format = '0.00'
+                df[col] = pd.to_numeric(df[col], errors='coerce')
             except ValueError:
                 pass
-    book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
+        # Write the data to the specified sheet
+        df.to_excel(book, sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
+
+        # set the number format
+        for row in worksheet.iter_rows():
+            for cell in row:
+                try:
+                    cell.number_format = '0.00'
+                except ValueError:
+                    pass
+        book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
+    else:
+        print("Sheet Data does not exist")
+
 
 
 '''with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
