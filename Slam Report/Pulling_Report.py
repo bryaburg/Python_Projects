@@ -27,53 +27,16 @@ def download_slam_data(csv_url):
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv", header=False, index=False)
 
-    # Open the existing Excel file
-    book = load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
-
-    if "DATA" in book.sheetnames:
-        worksheet = book["DATA"]
-        # clear the sheet
-        for row in range(1, worksheet.max_row+1):
-            worksheet.delete_rows(row,1)
-        # Read the csv file
+    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
+        # Read the excel file
         df = pd.read_csv('SLAM_file.csv')
-
+        #Convert data in Dataframe to float
         for col in df.columns:
             try:
-                df[col] = pd.to_numeric(df[col], errors='coerce')
+                df[col] = pd.to_numeric(df[col], errors='ignore')
             except ValueError:
                 pass
-        # Append the dataframe rows to the worksheet
-        for r in dataframe_to_rows(df, index=False, header=False):
-            worksheet.append(r)
-        # set the number format
-        for row in worksheet.iter_rows():
-            for cell in row:
-                try:
-                    cell.number_format = '0.00'
-                except ValueError:
-                    pass
-        book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
-
-
-'''with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
-    # Read the excel file
-    df = pd.read_csv('SLAM_file.csv')
-    #Convert data in Dataframe to float
-    for col in df.columns:
-        try:
-            df[col] = df[col].astype(float)
-        except ValueError:
-            pass
-        
-    # Formatting float columns to number format
-    df = df.applymap(lambda x: '{:.2f}'.format(x) if isinstance(x, float) else x)
-    
-    # Write the data to the specified sheet as numbers
-    df.to_excel(writer, sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)'''
-
-
-        
-        #TypeError: NDFrame.to_excel() got an unexpected keyword argument 'convert_float'
+        # Write the data to the specified sheet as numbers
+        df.to_excel(writer, sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
 
 download_slam_data(goog_url)
