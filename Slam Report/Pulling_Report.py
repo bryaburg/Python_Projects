@@ -44,6 +44,11 @@ def download_slam_data(csv_url):
                 pass
         # Write the data to the specified sheet
         df.to_excel(book, sheet_name='Data', startrow=0, startcol=0,  index=False, header=False)
+        worksheet = book["Data"]
+        for col, col_type in zip(df.columns, df.dtypes):
+            if col_type == 'float':
+                worksheet.column
+
 
 '''with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
     # Read the excel file
