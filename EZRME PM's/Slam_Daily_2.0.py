@@ -58,9 +58,10 @@ driver.get(details)
 driver.maximize_window()
   
 def click_buttons(buttons):
-    timeout = 5  # timeout in seconds
+    timeout = 5
     element = None
-    for i in range(timeout*2):
+    start_time = time.time()
+    while time.time() - start_time < timeout:
         try:
             element = driver.execute_script(buttons)
             if element is not None:
@@ -73,6 +74,7 @@ def click_buttons(buttons):
 
     if element is not None:
         element.click()
+
 
 click_buttons(sign_in_as_amazon_employee)
 
@@ -138,3 +140,24 @@ click_buttons(Submit_2)
 click_buttons(Save)
 
 time.sleep(5)
+
+'''# locate the ez-rme-app element
+root = driver.find_element_by_css_selector("ez-rme-app")
+# access the shadow root
+shadow_root = root.shadow_root
+# locate the ez-work-order-page element
+root = shadow_root.find_element_by_css_selector("ez-work-order-page")
+# access the shadow root
+shadow_root = root.shadow_root
+# locate the ez-menu element
+root = shadow_root.find_element_by_css_selector("ez-menu")
+# access the shadow root
+shadow_root = root.shadow_root
+# locate the first ez-menu-item element
+menu_item = shadow_root.find_elements_by_css_selector("ez-menu-item")[1]
+# access the shadow root
+shadow_root = menu_item.shadow_root
+# locate the div element
+div = shadow_root.find_element_by_css_selector("div")
+# click the element
+div.click()'''
