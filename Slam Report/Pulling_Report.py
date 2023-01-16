@@ -29,8 +29,8 @@ def download_slam_data(csv_url):
     # Open the existing Excel file
     book = load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
-    if "DATA" in book.sheetnames:
-        worksheet = book["DATA"]
+    if "Data" in book.sheetnames:
+        worksheet = book["Data"]
         # clear the sheet
         for row in range(1, worksheet.max_row+1):
             worksheet.delete_rows(row,1)
@@ -44,13 +44,12 @@ def download_slam_data(csv_url):
                 pass
         # Write the data to the specified sheet
         df.to_excel(book, sheet_name='Data', startrow=0, startcol=0,  index=False, header=False)
-        worksheet = book["DATA"]
+        worksheet = book["Data"]
         for col, col_type in zip(df.columns, df.dtypes):
             if col_type == 'float':
-                worksheet.column
-                
-        #Save Excel Sheet
+                worksheet.column_dimensions[col].number_format = '0.00'
         book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
+
 
 
 '''with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
