@@ -50,7 +50,6 @@ def download_slam_data(csv_url):
                 worksheet.column_dimensions[col].number_format = '0.00'
         book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
-#ValueError: Invalid file path or buffer object type: <class 'openpyxl.workbook.workbook.Workbook'>
 
 
 '''with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
