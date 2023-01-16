@@ -26,8 +26,30 @@ def download_slam_data(csv_url):
     my_list = list(cr)
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv", header=False, index=False)
+    
+    # Load the existing excel file
+    book = load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
-    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a') as writer:
+    # Read the csv file
+    df = pd.read_csv('SLAM_file.csv')
+
+    # Append the data to the sheet 'DATA'
+    writer = pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl')
+    writer.book = book
+
+    #Convert data in Dataframe to float
+    for col in df.columns:
+        try:
+            df[col] = df[col].astype(float)
+        except ValueError:
+            pass
+
+    df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False)
+
+    # Save the changes
+    writer.save()
+
+'''    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a') as writer:
         # Read the excel file
         df = pd.read_csv('SLAM_file.csv')
         #Convert data in Dataframe to float
@@ -37,7 +59,7 @@ def download_slam_data(csv_url):
             except ValueError:
                 pass
         # Write the data to the specified sheet as numbers
-        df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False)
+        df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False)'''
 
 
 download_slam_data(goog_url)
