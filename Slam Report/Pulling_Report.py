@@ -48,6 +48,9 @@ def download_slam_data(csv_url):
         for col, col_type in zip(df.columns, df.dtypes):
             if col_type == 'float':
                 worksheet.column
+                
+        #Save Excel Sheet
+        book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
 
 '''with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
