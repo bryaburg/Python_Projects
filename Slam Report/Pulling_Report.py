@@ -5,6 +5,7 @@ from requests_kerberos import HTTPKerberosAuth, OPTIONAL
 import openpyxl
 from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
+from openpyxl.styles.numbers import NUMBER_FORMAT
 import io
 
 goog_url = "https://monitorportal.amazon.com/mws?Action=GetGraph&Version=2007-07-07&SchemaName1=Search&Pattern1" \
@@ -27,27 +28,25 @@ def download_slam_data(csv_url):
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv", header=False, index=False)
     
+    # Open the existing Excel file and put in csv data
+    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine= "openpyxl", mode='a') as writer:
+        # Read the excel file
+        df = pd.read_csv('SLAM_file.csv')
+
+        # Write the data to the specified sheet
+        df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False)
+        writer.save()
+        
     # Load the existing excel file
     book = load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
+    worksheet = book["DATA"]
 
-    # Read the csv file
-    df = pd.read_csv('SLAM_file.csv')
+    for col in worksheet.iter_cols(values_only=True):
+        for cell in col:
+            if isinstance(cell, (int, float)):
+                worksheet[cell.coordinate].number_format = NUMBER_FORMAT
 
-    # Append the data to the sheet 'DATA'
-    writer = pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl')
-    writer.book = book
-
-    #Convert data in Dataframe to float
-    for col in df.columns:
-        try:
-            df[col] = df[col].astype(float)
-        except ValueError:
-            pass
-
-    df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False)
-
-    # Save the changes
-    writer.save()
+    book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
 '''    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a') as writer:
         # Read the excel file
