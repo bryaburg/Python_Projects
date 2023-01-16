@@ -25,8 +25,39 @@ def download_slam_data(csv_url):
     my_list = list(cr)
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv", header=False, index=False)
+    
+    # Open the existing Excel file
+    book = load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
+    # Get the active sheet
+    writer = pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', if_sheets_exists='replace') 
+    writer.book = book
 
-with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
+    # Read the csv file
+    df = pd.read_csv('SLAM_file.csv')
+
+    for col in df.columns:
+        try:
+            df[col] = pd.to_numeric(df[col])
+        except ValueError:
+            pass
+
+    # Write the data to the specified sheet
+    df.to_excel(writer, sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
+
+    # Get the active sheet
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
+    worksheet = writer
+
+    # set the number format
+    for row in worksheet.iter_rows():
+        for cell in row:
+            try:
+                cell.number_format = '0.00'
+            except ValueError:
+                pass
+
+
+'''with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
     # Read the excel file
     df = pd.read_csv('SLAM_file.csv')
     #Convert data in Dataframe to float
@@ -40,6 +71,7 @@ with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/S
     df = df.applymap(lambda x: '{:.2f}'.format(x) if isinstance(x, float) else x)
     
     # Write the data to the specified sheet as numbers
-    df.to_excel(writer, sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
+    df.to_excel(writer, sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)'''
+
 
 download_slam_data(goog_url)
