@@ -25,53 +25,10 @@ def download_slam_data(csv_url):
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv", header=False, index=False)
     
-    # Read the CSV file
-    df = pd.read_csv('SLAM_file.csv')
-
-    # Open the existing Excel file
-    book = openpyxl.load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
-
-    # Get the sheet 'DATA'
-    data_sheet = book['DATA']
-
-    # Clear all the data in the sheet
-    for row in data_sheet.iter_rows():
-        for cell in row:
-            cell.value = None
-            
-    # Get the number of rows and columns in the sheet
-    num_rows = data_sheet.max_row
-    num_cols = data_sheet.max_column
-
-    # Iterate over the rows and columns of the sheet 'DATA'
-    for i in range(len(df)):
-        for j in range(num_cols):
-            # Get the cell
-            cell = data_sheet.cell(row=num_rows+i+1, column=j+1)
-
-            # Try to convert the cell value to a number
-            try:
-                cell.value = float(df.iloc[i, j])
-            except ValueError:
-                cell.value = df.iloc[i, j]
-
-    # Save the changes to the Excel file
-    book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
-
-
-
-
-'''    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a') as writer:
+    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', if_sheet_exist = 'replace') as writer:
         # Read the excel file
         df = pd.read_csv('SLAM_file.csv')
-        #Convert data in Dataframe to float
-        for col in df.columns:
-            try:
-                df[col] = pd.to_numeric(df[col], errors='ignore')
-            except ValueError:
-                pass
-        # Write the data to the specified sheet as numbers
-        df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False)'''
+        df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False)
 
 
 download_slam_data(goog_url)
