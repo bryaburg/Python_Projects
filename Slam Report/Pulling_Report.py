@@ -34,22 +34,28 @@ def download_slam_data(csv_url):
         writer.save()
 
     # Load the existing excel file
-    book = pd.read_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', sheet_name='DATA', engine='openpyxl', data_only=True)
+    book = openpyxl.load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
-    #save the book
-    book.to_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', index=False)
+    # Get the sheet 'DATA'
+    data_sheet = book['DATA']
 
-    # Load the existing excel file
-    book = pd.read_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', sheet_name='DATA', engine='openpyxl')
+    # Get the number of rows and columns in the sheet
+    num_rows = data_sheet.max_row
+    num_cols = data_sheet.max_column
 
     # Iterate over the rows and columns of the sheet 'DATA'
-    for i in range(len(book)):
-        for j in range(len(book.columns)):
+    for i in range(len(df)):
+        for j in range(num_cols):
+            # Get the cell
+            cell = data_sheet.cell(row=num_rows+i+1, column=j+1)
+
             # Try to convert the cell value to a number
             try:
-                book.iloc[i, j] = pd.to_numeric(book.iloc[i, j])
+                cell.value = float(df.iloc[i, j])
             except ValueError:
-                pass
+                cell.value = df.iloc[i, j]
+
+book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
     #save the book
     book.to_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', index=False)
