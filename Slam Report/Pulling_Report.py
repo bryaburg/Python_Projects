@@ -25,17 +25,15 @@ def download_slam_data(csv_url):
     my_list = list(cr)
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv", header=False, index=False)
-    
-    from openpyxl import load_workbook
 
     # Open the existing Excel file
     book = load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
-    if "DATA" in book.sheetnames:
+    if "Data" in book.sheetnames:
         worksheet = book["Data"]
         # clear the sheet
-        for row in worksheet.iter_rows(values_only=True):
-            worksheet.delete_rows(row[0].row,1)
+        for row in range(1, worksheet.max_row+1):
+            worksheet.delete_rows(row,1)
         # Read the csv file
         df = pd.read_csv('SLAM_file.csv')
 
@@ -45,20 +43,7 @@ def download_slam_data(csv_url):
             except ValueError:
                 pass
         # Write the data to the specified sheet
-        df.to_excel(book, sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
-
-        # set the number format
-        for row in worksheet.iter_rows():
-            for cell in row:
-                try:
-                    cell.number_format = '0.00'
-                except ValueError:
-                    pass
-        book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
-    else:
-        print("Sheet Data does not exist")
-
-
+        df.to_excel(book, sheet_name='Data', startrow=0, startcol=0,  index=False, header=False)
 
 '''with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
     # Read the excel file
