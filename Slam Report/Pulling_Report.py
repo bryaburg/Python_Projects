@@ -46,7 +46,6 @@ def download_slam_data(csv_url):
         # Append the dataframe rows to the worksheet
         for r in dataframe_to_rows(df, index=False, header=False):
             worksheet.append(r)
-
         # set the number format
         for row in worksheet.iter_rows():
             for cell in row:
