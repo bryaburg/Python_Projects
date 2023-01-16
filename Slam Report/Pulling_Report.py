@@ -28,25 +28,23 @@ def download_slam_data(csv_url):
     
     # Open the existing Excel file
     book = load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
-    # Get the active sheet
-    writer = pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', if_sheets_exists='replace') 
-    writer.book = book
+    worksheet = book["Data"]
+
+    # clear the sheet
+    for row in worksheet.iter_rows(values_only=True):
+        worksheet.delete_rows(row[0].row,1)
 
     # Read the csv file
     df = pd.read_csv('SLAM_file.csv')
 
     for col in df.columns:
         try:
-            df[col] = pd.to_numeric(df[col])
+            df[col] = pd.to_numeric(df[col], errors='coerce')
         except ValueError:
             pass
 
     # Write the data to the specified sheet
-    df.to_excel(writer, sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
-
-    # Get the active sheet
-    writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
-    worksheet = writer
+    df.to_excel(book, sheet_name='Data', startrow=0, startcol=0,  index=False, header=False)
 
     # set the number format
     for row in worksheet.iter_rows():
@@ -55,6 +53,7 @@ def download_slam_data(csv_url):
                 cell.number_format = '0.00'
             except ValueError:
                 pass
+    book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
 
 '''with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
