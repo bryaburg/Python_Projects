@@ -28,8 +28,7 @@ def download_slam_data(csv_url):
     # Read the excel file
     df = pd.read_csv('SLAM_file.csv')
 
-    # Open the existing Excel file and put in csv data
-    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', mode='a') as writer:
+    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', mode='a', if_exists='replace') as writer:
         # Write the data to the specified sheet
         df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False, engine='openpyxl')
         writer.save()
@@ -39,7 +38,7 @@ def download_slam_data(csv_url):
 
     #save the book
     book.to_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', index=False)
-    
+
     # Load the existing excel file
     book = pd.read_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', sheet_name='DATA', engine='openpyxl')
 
@@ -54,6 +53,7 @@ def download_slam_data(csv_url):
 
     #save the book
     book.to_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', index=False)
+
 
 '''    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a') as writer:
         # Read the excel file
