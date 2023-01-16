@@ -5,7 +5,7 @@ from requests_kerberos import HTTPKerberosAuth, OPTIONAL
 import openpyxl
 from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
-from openpyxl.styles.numbers import NUMBER_FORMAT
+from openpyxl.cell.cell import set_column_number_format
 import io
 
 goog_url = "https://monitorportal.amazon.com/mws?Action=GetGraph&Version=2007-07-07&SchemaName1=Search&Pattern1" \
@@ -36,15 +36,13 @@ def download_slam_data(csv_url):
         # Write the data to the specified sheet
         df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False)
         writer.save()
-        
+
     # Load the existing excel file
     book = load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
     worksheet = book["DATA"]
 
-    for col in worksheet.iter_cols(values_only=True):
-        for cell in col:
-            if isinstance(cell, (int, float)):
-                worksheet[cell.coordinate].number_format = NUMBER_FORMAT
+    for col in range(1, len(df.columns) + 1):
+        set_column_number_format(worksheet, col, "0.00")
 
     book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
