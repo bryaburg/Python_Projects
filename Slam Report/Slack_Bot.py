@@ -3,7 +3,7 @@ import requests
 webhook_url = "https://hooks.slack.com/services/XXX/XXX/XXX"
 
 # Open the file and read its contents
-with open("/path/to/myfile.xlsm", "rb") as file:
+with open("Slam Report\SLAM Report.xlsx", "rb") as file:
     file_content = file.read()
 
 payload = {
@@ -11,7 +11,7 @@ payload = {
     "files": [
         {
             "content": file_content,
-            "filename": "myfile.xlsm"
+            "filename": "Slam Report.xlsm"
         }
     ]
 }
