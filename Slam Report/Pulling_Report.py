@@ -25,20 +25,20 @@ def download_slam_data(csv_url):
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv", header=False, index=False)
     
-    # Read the excel file
+    # Read the CSV file
     df = pd.read_csv('SLAM_file.csv')
 
-    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', mode='a', if_exists='replace') as writer:
-        # Write the data to the specified sheet
-        df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False, engine='openpyxl')
-        writer.save()
-
-    # Load the existing excel file
+    # Open the existing Excel file
     book = openpyxl.load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
     # Get the sheet 'DATA'
     data_sheet = book['DATA']
 
+    # Clear all the data in the sheet
+    for row in data_sheet.iter_rows():
+        for cell in row:
+            cell.value = None
+            
     # Get the number of rows and columns in the sheet
     num_rows = data_sheet.max_row
     num_cols = data_sheet.max_column
@@ -55,6 +55,7 @@ def download_slam_data(csv_url):
             except ValueError:
                 cell.value = df.iloc[i, j]
 
+    # Save the changes to the Excel file
     book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
 
