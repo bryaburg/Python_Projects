@@ -4,6 +4,7 @@ import requests
 from requests_kerberos import HTTPKerberosAuth, OPTIONAL
 import openpyxl
 from openpyxl import load_workbook
+from openpyxl.utils.dataframe import dataframe_to_rows
 import io
 
 goog_url = "https://monitorportal.amazon.com/mws?Action=GetGraph&Version=2007-07-07&SchemaName1=Search&Pattern1" \
@@ -42,15 +43,19 @@ def download_slam_data(csv_url):
                 df[col] = pd.to_numeric(df[col], errors='coerce')
             except ValueError:
                 pass
-        # Write the data to the specified sheet
-        df.to_excel(book, sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
-        worksheet = book["DATA"]
-        for col, col_type in zip(df.columns, df.dtypes):
-            if col_type == 'float':
-                worksheet.column_dimensions[col].number_format = '0.00'
+        # Append the dataframe rows to the worksheet
+        for r in dataframe_to_rows(df, index=False, header=False):
+            worksheet.append(r)
+
+        # set the number format
+        for row in worksheet.iter_rows():
+            for cell in row:
+                try:
+                    cell.number_format = '0.00'
+                except ValueError:
+                    pass
         book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
-#ValueError: Invalid file path or buffer object type: <class 'openpyxl.workbook.workbook.Workbook'>
 
 '''with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
     # Read the excel file
