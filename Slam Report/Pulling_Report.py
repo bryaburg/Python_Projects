@@ -28,11 +28,29 @@ def download_slam_data(csv_url):
     # Read the excel file
     df = pd.read_csv('SLAM_file.csv')
 
-    # Write the data to the specified sheet
-    df.to_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', sheet_name='DATA', startrow=0, index=False, header=False, engine='openpyxl', mode='a')
+    # Open the existing Excel file and put in csv data
+    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', mode='a') as writer:
+        # Write the data to the specified sheet
+        df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False, engine='openpyxl')
+        writer.save()
 
     # Load the existing excel file
     book = pd.read_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', sheet_name='DATA', engine='openpyxl', data_only=True)
+
+    #save the book
+    book.to_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', index=False)
+    
+    # Load the existing excel file
+    book = pd.read_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', sheet_name='DATA', engine='openpyxl')
+
+    # Iterate over the rows and columns of the sheet 'DATA'
+    for i in range(len(book)):
+        for j in range(len(book.columns)):
+            # Try to convert the cell value to a number
+            try:
+                book.iloc[i, j] = pd.to_numeric(book.iloc[i, j])
+            except ValueError:
+                pass
 
     #save the book
     book.to_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', index=False)
