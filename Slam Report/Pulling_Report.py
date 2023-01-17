@@ -25,10 +25,17 @@ def download_slam_data(csv_url):
     df = pd.DataFrame(my_list)
     df.to_csv("SLAM_file.csv", header=False, index=False)
     
-    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', if_sheet_exist = 'replace') as writer:
+    # Open the existing Excel file and put in csv data
+    with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
         # Read the excel file
         df = pd.read_csv('SLAM_file.csv')
-        df.to_excel(writer, sheet_name='DATA', startrow=writer.sheets['DATA'].max_row, index=False, header=False)
-
+        #Convert data in Dataframe to float
+        for col in df.columns:
+            try:
+                df[col] = df[col].astype(float)
+            except ValueError:
+                pass
+        # Write the data to the specified sheet
+        df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
 
 download_slam_data(goog_url)
