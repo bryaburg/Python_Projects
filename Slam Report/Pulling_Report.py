@@ -56,7 +56,7 @@ def download_slam_data(csv_url):
 
                 # Try to convert the cell value to a number
                 try:
-                    cell.value = float(cell.value)
+                    cell.value = float(cell.value)  #float() argument must be a string or a real number, not 'NoneType'
                 except ValueError:
                     pass
 
