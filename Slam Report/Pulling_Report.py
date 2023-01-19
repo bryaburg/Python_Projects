@@ -52,11 +52,11 @@ def download_slam_data(csv_url):
         for i in range(1, num_rows+1):
             for j in range(1, num_cols+1):
                 # Get the cell
-                cell = data_sheet.cell(row=i, column=j)
+                cell = data_sheet.cell(row=i, column=j)  #AttributeError: 'Workbook' object has no attribute 'iloc'
 
                 # Try to convert the cell value to a number
                 try:
-                    cell.value = float(cell.value)  #float() argument must be a string or a real number, not 'NoneType'
+                    book.iloc[i, j] = pd.to_numeric(book.iloc[i, j])
                 except ValueError:
                     pass
 
