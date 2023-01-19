@@ -39,28 +39,16 @@ def download_slam_data(csv_url):
         df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
         
         # Load the existing excel file
-        book = openpyxl.load_workbook('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
-
-        # Get the sheet 'DATA'
-        data_sheet = book['DATA']
-
-        # Get the number of rows and columns in the sheet
-        num_rows = data_sheet.max_row
-        num_cols = data_sheet.max_column
-
+        book = pd.read_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', sheet_name='DATA')
         # Iterate over the rows and columns of the sheet 'DATA'
-        for i in range(1, num_rows+1):
-            for j in range(1, num_cols+1):
-                # Get the cell
-                cell = data_sheet.cell(row=i, column=j)  #AttributeError: 'Workbook' object has no attribute 'iloc'
+        for col in book.columns:
+            try:
+                book[col] = book[col].astype(float)
+            except ValueError:
+                pass
 
-                # Try to convert the cell value to a number
-                try:
-                    book.iloc[i, j] = pd.to_numeric(book.iloc[i, j])
-                except ValueError:
-                    pass
+        #save the book
+        book.to_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', index=False, sheet_name='DATA')
 
-        # Save the changes to the excel file
-        book.save('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx')
 
 download_slam_data(goog_url)
