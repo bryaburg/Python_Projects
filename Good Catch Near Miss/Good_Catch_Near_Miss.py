@@ -11,6 +11,7 @@ import time
 import calendar
 import keyboard
 import random
+import chromedriver_binary
 
 
 
@@ -47,11 +48,7 @@ random_near_miss = random.choice(Near_miss)
 #Updates chromedriver as needed
 chromedriver_autoinstaller.install()
 
-#Is showing webdriver where chrome and chromedriver is located
-options = webdriver.ChromeOptions()
-options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-chrome_driver_binary = r"C:\Users\bryaburg\Desktop\Python_Projects\Python_Projects\Good Catch Near Miss\chromedriver.exe"
-driver = webdriver.Chrome(chrome_driver_binary, chrome_options=options)
+driver = webdriver.Chrome()
 
 #Pull we address.
 driver.get("https://app.smartsheet.com/b/form/f9293e40f29343108d1b37a5fb831bca")
@@ -63,73 +60,72 @@ time.sleep(3)
 current_day = datetime.date.today()
 Todays_Date = datetime.date.strftime(current_day, "%m/%d/%Y")
 Date_Form = driver.find_element(By.XPATH,'//*[@id="date_DATE"]').send_keys(Todays_Date)
-time.sleep(3)
+
 
 #Check box Good Catch
 Observation_Box = driver.find_element(By.XPATH,'//*[@id="983lwNM"]/div[2]/div/div[2]/span[1]').click()
 keyboard.press_and_release("down")
 keyboard.press_and_release("enter")
-time.sleep(3)
+
 
 #Selecting Site
 Site = driver.find_element(By.XPATH,'//*[@id="pJEjXL0"]/div[2]/div/div[1]').click()
 keyboard.write("DSM5")
 keyboard.press_and_release("enter")
-time.sleep(3)
+
 
 #Find Submitter Name box and put first and last name.
 Name = "Burgess, Bryan"
 First_Last_Name = driver.find_element(By.XPATH,'//*[@id="text_box_SUBMITTER NAME (OPTIONAL)"]').send_keys(Name)
-time.sleep(3)
+
 
 #DISCOVERY TYPE
 DISCOVERY_TYPE = driver.find_element(By.XPATH,'//*[@id="JyNbA1q"]/div/div/div[1]').click()
 keyboard.press_and_release("down")
 keyboard.press_and_release("enter")
-time.sleep(3)
+
 
 #UNSAFE ACT OR CONDITION*
 UNSAFE_ACT_OR_CONDITION = driver.find_element(By.XPATH,'//*[@id="mJNyPvd"]/div[2]/div/div[1]').click()
 keyboard.press_and_release("down")
 keyboard.press_and_release("enter")
-time.sleep(3)
+
 
 #DESCRIPTION OF HAZARDOUS SITUATION
 DESCRIPTION_OF_HAZARDOUS_SITUATION = driver.find_element(By.XPATH,'//*[@id="textarea_DESCRIPTION OF HAZARDOUS SITUATION"]').send_keys(random_near_miss["DESCRIPTION_OF_HAZARDOUS_SITUATION"])
-time.sleep(5)
+
 
 #STATE OF MIND*
 STATE_OF_MIND = driver.find_element(By.XPATH,'//*[@id="nJeQzLz"]/div[2]/div/div[1]').click()
 keyboard.press_and_release("down")
 keyboard.press_and_release("enter")
-time.sleep(3)
+
 
 #CRITICAL ERROR*
 CRITICAL_ERROR = driver.find_element(By.XPATH,'//*[@id="AMvqn9w"]/div[2]/div/div[1]').click()
 keyboard.press_and_release("down")
 keyboard.press_and_release("enter")
-time.sleep(3)
+
 
 #CRITICAL ERROR REDUCTION
 CRITICAL_ERROR_REDUCTION = driver.find_element(By.XPATH,'//*[@id="Pn23l0G"]/div[2]/div/div[1]').click()
 keyboard.press_and_release("down")
 keyboard.press_and_release("enter")
-time.sleep(3)
+
 
 #HOW IT COULD BE WORSE
 HOW_IT_COULD_BE_WORSE = driver.find_element(By.XPATH,'//*[@id="textarea_HOW IT COULD BE WORSE"]').send_keys(random_near_miss["HOW_IT_COULD_BE_WORSE"])
-time.sleep(5)
+
 
 #IMMEDIATE ACTION RESULT
 IMMEDIATE_ACTION_RESULT = driver.find_element(By.XPATH,'//*[@id="WAJn6wQ"]/div[2]/div/div[1]').click()
 keyboard.press_and_release("down")
 keyboard.press_and_release("enter")
-time.sleep(3)
+
 
 #IMMEDIATE ACTION
 IMMEDIATE_ACTION = driver.find_element(By.XPATH,'//*[@id="textarea_IMMEDIATE ACTION"]').send_keys(random_near_miss["IMMEDIATE_ACTION"])
-time.sleep(5)
+
 
 #Summit 
 Summit = driver.find_element(By.XPATH,'//*[@id="root"]/div/div/div/section[2]/div/div/form/div[27]/button/span').click()
-time.sleep(3)
