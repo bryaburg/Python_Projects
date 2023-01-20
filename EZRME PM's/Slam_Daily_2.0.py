@@ -59,22 +59,18 @@ driver.maximize_window()
   
 def click_buttons(buttons):
     timeout = 5
-    element = None
     start_time = time.time()
     while time.time() - start_time < timeout:
         try:
             element = driver.execute_script(buttons)
-            if element is not None:
-                break
+            if element:
+                element.click()
+                return
         except:
             pass
         time.sleep(0.5)
     else:
         print("Timed out waiting for element to be located.")
-
-    if element is not None:
-        element.click()
-
 
 click_buttons(sign_in_as_amazon_employee)
 
