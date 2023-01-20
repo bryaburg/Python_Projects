@@ -1,8 +1,10 @@
 from selenium import webdriver
-import chromedriver_autoinstaller
+import chromedriver_autoinstaller as chromedriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 import time
+import chromedriver_binary
+import keyboard
 
 #Ask for ICW Number 
 WO_Number= input("Enter WO Number")
@@ -42,13 +44,10 @@ Submit_2 = 'return document.querySelector("ez-rme-app").shadowRoot.querySelector
 Save = 'return document.querySelector("ez-rme-app").shadowRoot.querySelector("ez-work-order-page").shadowRoot.querySelector("ez-work-order-details-page").shadowRoot.querySelector("ez-work-order-details").shadowRoot.querySelector("div").querySelectorAll("mwc-button")[1]'
 
 #Updates chromedriver as needed
-chromedriver_autoinstaller.install()
+chromedriver.install()
 
-#Is showing webdriver where chrome and chromedriver is located
-options = webdriver.ChromeOptions()
-options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-chrome_driver_binary = r"C:\Users\bryaburg\Desktop\Python_Projects\Python_Projects\EZRME PM's\chromedriver.exe"
-driver = webdriver.Chrome(chrome_driver_binary, chrome_options=options)
+
+driver = webdriver.Chrome() 
 
 #make Webpage 
 details = (f"https://portal.ez.na.rme.logistics.a2z.com/work-orders/{WO_Number}/details")
@@ -118,7 +117,8 @@ click_buttons(Labor)
 click_buttons(Plus_Mark)
 
 click_buttons(Hours)
-Hours.send_keys(".5")
+keyboard.press_and_release(".")
+keyboard.press_and_release("5")
 
 click_buttons(Summit_1)
 
