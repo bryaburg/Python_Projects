@@ -29,26 +29,25 @@ def download_slam_data(csv_url):
     with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
         # Read the excel file
         df = pd.read_csv('SLAM_file.csv')
-        #Convert data in Dataframe to float
-        for col in df.columns:
-            try:
-                df[col] = df[col].astype(float)
-            except ValueError:
-                pass
-        # Write the data to the specified sheet
-        df.to_excel(writer,sheet_name='DATA', startrow=0, startcol=0,  index=False, header=False)
-        
-        # Load the existing excel file
+       
         book = pd.read_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', sheet_name='DATA')
-        # Iterate over the rows and columns of the sheet 'DATA'
+
+        # Iterate over the columns of the sheet 'DATA'
         for col in book.columns:
+            # Try to convert the column to numeric type
             try:
-                book[col] = book[col].astype(float)
+                book[col] = pd.to_numeric(book[col])
             except ValueError:
                 pass
 
-        #save the book
-        book.to_excel('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl', index=False, sheet_name='DATA')
+        # Create a writer object
+        writer = pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', engine='openpyxl')
+
+        # Write the dataframe to the sheet 'DATA'
+        book.to_excel(writer, sheet_name='DATA', index=False)
+
+        # Save the changes
+        writer.save()
 
 
 download_slam_data(goog_url)
