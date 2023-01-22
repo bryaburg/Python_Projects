@@ -27,6 +27,7 @@ def download_slam_data(csv_url):
     
     # Open the existing Excel file and put in csv data
     with pd.ExcelWriter('C:/Users/bryaburg/Desktop/Python_Projects/Python_Projects/Slam Report/SLAM Report.xlsx', mode='a', engine= "openpyxl", if_sheet_exists = 'replace') as writer:
+        
         # Read the excel file
         df = pd.read_csv('SLAM_file.csv')
        
