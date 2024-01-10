@@ -1,0 +1,39 @@
+{
+  "name": "51A - PreFoam MNT",
+  "tagType": "Folder",
+  "tags": [
+    {
+      "name": "LN51_PreFoam_MNT",
+      "typeId": "AssemblyWorkStation_UniqueName",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "LN07_PreFoam_MNT"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "nsu\u003dKEPServerEX;s\u003d{KepDevice}.{DataConcentratorName}.Global.{OPCTagName}"
+          },
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    }
+  ]
+}

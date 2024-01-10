@@ -1,0 +1,1369 @@
+{
+  "name": "51A - PreFoam",
+  "tagType": "Folder",
+  "tags": [
+    {
+      "name": "51WAM10",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM10"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAS15",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAS15"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM12",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM12"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM09",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM09"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51SAS05",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51SAS05"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51NAS02",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51NAS02"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAS14",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAS14"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM07",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM07"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51SAS03",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51SAS03"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM03",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM03"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM09",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM09"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM04",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM04"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51NAS10",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51NAS10"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51NAS05",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51NAS05"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51NAS04",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51NAS04"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM05",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM05"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51NAS08",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51NAS08"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51SAS02",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51SAS02"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM04",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM04"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM08",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM08"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51NAS07",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51NAS07"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51SAS08",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51SAS08"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM06",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM06"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM10",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM10"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM01",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM01"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM02",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM02"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAS12",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAS12"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM03",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM03"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM05",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM05"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51NAS09",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51NAS09"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51SAS07",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51SAS07"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAS06",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAS06"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAS01",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAS01"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM08",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM08"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51SAS09",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51SAS09"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM12",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM12"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAS11",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAS11"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM01",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM01"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51SAS10",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51SAS10"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAS13",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAS13"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM06",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM06"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM11",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM11"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51SAS04",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51SAS04"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM07",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM07"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51EAM11",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51EAM11"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51WAM02",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51WAM02"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "51NAS03",
+      "typeId": "AssemblyWorkStation",
+      "parameters": {
+        "DataConcentratorName": {
+          "dataType": "String",
+          "value": "M317-DC1"
+        },
+        "OPCTagName": {
+          "dataType": "String",
+          "value": "51NAS03"
+        },
+        "KepDevice": {
+          "dataType": "String",
+          "value": "AMA-M317-DC1-CH1"
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "EQName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag"
+        }
+      ]
+    }
+  ]
+}
