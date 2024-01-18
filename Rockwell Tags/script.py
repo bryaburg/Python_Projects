@@ -3,7 +3,7 @@ import pandas as pd
 csv_file = 'C:/Users/bburgess/Desktop/Python_Projects/Rockwell Tags/K45791_01_17_2024-Controller-Tags.CSV'
 
 try:
-    df = pd.read_csv(csv_file, sep=',', skiprows=6)
+    df = pd.read_csv(csv_file, sep=',', skiprows=6) #First rows are skipped, not needed to parse the file.
 except pd.errors.ParserError as e:
     print(f"An error occurred while reading the CSV file: {e}")
     raise
