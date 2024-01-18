@@ -11,7 +11,6 @@ except pd.errors.ParserError as e:
 while True:
     value_to_find = input("Enter the value you want to find (or type 'exit' to quit): ")
     if value_to_find.lower() == 'exit':
-        print("Exiting program.")
         break
 
     if df.isin([value_to_find]).any().any():
@@ -20,8 +19,7 @@ while True:
 
         output_file = 'C:/Users/bburgess/Desktop/Python_Projects/Rockwell Tags/Controller-Tags_Update.CSV'
         df.to_csv(output_file, index=False)
-
-        print("Modifications completed and saved to the new CSV file.")
+        
         break
     else:
         print("Value not found in the file. Please try again.")
