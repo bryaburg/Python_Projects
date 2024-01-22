@@ -11,7 +11,7 @@ do
 done
 """
 
-def process_csv_and_save_to_txt(csv_file_path, txt_file_path):
+def Tag_Value(csv_file_path, txt_file_path):
     with open(csv_file_path, 'r') as file:
         lines = file.readlines()
 
@@ -32,5 +32,5 @@ def process_csv_and_save_to_txt(csv_file_path, txt_file_path):
 csv_file_path = r'C:\Users\bburgess\Desktop\Python_Projects\logix500to5000tags\K45791_01_17_2024_Comments.CSV'  # Replace with your CSV file path
 txt_file_path = r'C:\Users\bburgess\Desktop\Python_Projects\logix500to5000tags\output.txt'
 
-process_csv_and_save_to_txt(csv_file_path, txt_file_path)
+Tag_Value(csv_file_path, txt_file_path)
 
