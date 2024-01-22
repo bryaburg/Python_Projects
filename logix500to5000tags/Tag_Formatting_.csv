@@ -1,0 +1,37 @@
+DATATYPE,ATTRIBUTES
+# 8 channel Analog Input Card
+"AB:1756_IF8I:C:0","(ExternalAccess := Read/Write)"
+"AB:1756_IF8I:I:0","EngineeringUnit.CH[0].DATA := ""%"", EngineeringUnit.CH[1].DATA := ""%"", EngineeringUnit.CH[2].DATA := ""%"", EngineeringUnit.CH[3].DATA := ""%"", EngineeringUnit.CH[4].DATA := ""%"", EngineeringUnit.CH[5].DATA := ""%"", EngineeringUnit.CH[6].DATA := ""%"", EngineeringUnit.CH[7].DATA := ""%"", ExternalAccess := Read/Write)"
+"AB:1756_IF8I:O:0","(ExternalAccess := Read/Write)"
+
+# 8 channel Analog Output Card
+"AB:1756_OF8I:C:0","(ExternalAccess := Read/Write)"
+"AB:1756_OF8I:I:1","(ExternalAccess := Read/Write)"
+"AB:1756_OF8I:O:0","(EngineeringUnit.CH[0].DATA := ""%"", EngineeringUnit.CH[1].DATA := ""%"", EngineeringUnit.CH[2].DATA := ""%"", EngineeringUnit.CH[3].DATA := ""%"", EngineeringUnit.CH[4].DATA := ""%"", EngineeringUnit.CH[5].DATA := ""%"", EngineeringUnit.CH[6].DATA := ""%"", EngineeringUnit.CH[7].DATA := ""%"", ExternalAccess := Read/Write)"
+
+# Discrete Input Card
+"AB:1756_DI:C:1","(ExternalAccess := Read/Write)"
+"AB:1756_DI:I:0","(ExternalAccess := Read/Write)"
+
+#Discrete Output Card
+"AB:1756_DO:C:0","(ExternalAccess := Read/Write)"
+"AB:1756_DO_Fused:I:0","(ExternalAccess := Read/Write)"
+"AB:1756_DO:O:0","(ExternalAccess := Read/Write)"
+
+# Double Intergar
+"DINT[101]","(RADIX := Binary, Constant := false, ExternalAccess := Read/Write)"
+
+#Counter
+"COUNTER[9]","(Constant := false, ExternalAccess := Read/Write)"
+
+#Real / Float
+"REAL[1]","(RADIX := Float, Constant := false, ExternalAccess := Read/Write)"
+
+# Intergar
+"INT[16]","(RADIX := Binary, Constant := false, ExternalAccess := Read/Write)"
+
+# Control
+"CONTROL[3]","(Constant := false, ExternalAccess := Read/Write)"
+
+# Timer
+"TIMER[93]","(Constant := false, ExternalAccess := Read/Write)"
