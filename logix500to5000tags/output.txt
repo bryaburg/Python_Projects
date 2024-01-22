@@ -1,0 +1,2220 @@
+Addr: B3
+Slot: 0
+Terminal: 0
+Description: "VILTER ENCLOSURE CONTROL POWER LOST ALARM (1=ALARM) "
+
+Addr: B3
+Slot: 0
+Terminal: 1
+Description: "EMERGENCY STOP TRIPPED ALARM (1=ALARM)  "
+
+Addr: B3
+Slot: 0
+Terminal: 2
+Description: "ENABLE COMPRESSOR SUBROUTINE  "
+
+Addr: B3
+Slot: 0
+Terminal: 3
+Description: "ENABLE AIR UNIT SUBROUTINE  "
+
+Addr: B3
+Slot: 0
+Terminal: 4
+Description: "ENABLE CONDENSER SUBROUTINE  "
+
+Addr: B3
+Slot: 0
+Terminal: 5
+Description: "ENABLE ANALOG IN SUBROUTINE  "
+
+Addr: B3
+Slot: 0
+Terminal: 6
+Description: "ENABLE COMMUNICATION SUBROUTINE  "
+
+Addr: B3
+Slot: 0
+Terminal: 7
+Description: "ENABLE ALARM SUBROUTINE  "
+
+Addr: B3
+Slot: 0
+Terminal: 8
+Description: "ENABLE PANELVIEW SUBROUTINE  "
+
+Addr: B3
+Slot: 0
+Terminal: 10
+Description: "SLOT 10 RTD MODULE USER MANUAL CONFIGURATION "
+
+Addr: B3
+Slot: 0
+Terminal: 11
+Description: "SLOT 10 RTD MODULE USER MANUAL CONFIGURATION "
+
+Addr: B3
+Slot: 0
+Terminal: 15
+Description: "SLOT 10 RTD MODULE CHANNEL 0 TEMP. SENSOR ENABLED"
+
+Addr: B3
+Slot: 1
+Terminal: 0
+Description: "SLOT 10 RTD MODULE CHANNEL 1 TEMP. SENSOR ENABLED"
+
+Addr: B3
+Slot: 1
+Terminal: 1
+Description: "SLOT 10 RTD MODULE CHANNEL 2 TEMP. SENSOR ENABLED"
+
+Addr: B3
+Slot: 1
+Terminal: 2
+Description: "SLOT 10 RTD MODULE CHANNEL 3 TEMP. SENSOR ENABLED"
+
+Addr: B3
+Slot: 1
+Terminal: 3
+Description: "SLOT 10 RTD MODULE CHANNEL 4 TEMP. SENSOR ENABLED"
+
+Addr: B3
+Slot: 1
+Terminal: 4
+Description: "SLOT 10 RTD MODULE CHANNEL 5 TEMP. SENSOR ENABLED"
+
+Addr: B3
+Slot: 1
+Terminal: 5
+Description: "SLOT 10 RTD MODULE CHANNEL 6 TEMP. SENSOR ENABLED"
+
+Addr: B3
+Slot: 1
+Terminal: 6
+Description: "SLOT 10 RTD MODULE CHANNEL 7 TEMP. SENSOR ENABLED"
+
+Addr: B3
+Slot: 1
+Terminal: 12
+Description: "SLOT 10 RTD MODULE CHANNEL 0 AUTOCALIBRATION IN PROGRESS"
+
+Addr: B3
+Slot: 1
+Terminal: 13
+Description: "SLOT 10 RTD MODULE CHANNEL 1 AUTOCALIBRATION IN PROGRESS"
+
+Addr: B3
+Slot: 1
+Terminal: 14
+Description: "SLOT 10 RTD MODULE CHANNEL 2 AUTOCALIBRATION IN PROGRESS"
+
+Addr: B3
+Slot: 1
+Terminal: 15
+Description: "SLOT 10 RTD MODULE CHANNEL 3 AUTOCALIBRATION IN PROGRESS"
+
+Addr: B3
+Slot: 2
+Terminal: 0
+Description: "SLOT 10 RTD MODULE CHANNEL 4 AUTOCALIBRATION IN PROGRESS"
+
+Addr: B3
+Slot: 2
+Terminal: 1
+Description: "SLOT 10 RTD MODULE CHANNEL 5 AUTOCALIBRATION IN PROGRESS"
+
+Addr: B3
+Slot: 2
+Terminal: 2
+Description: "SLOT 10 RTD MODULE CHANNEL 6 AUTOCALIBRATION IN PROGRESS"
+
+Addr: B3
+Slot: 2
+Terminal: 3
+Description: "SLOT 10 RTD MODULE CHANNEL 7 AUTOCALIBRATION IN PROGRESS"
+
+Addr: B3
+Slot: 2
+Terminal: 5
+Description: "SLOT 10 RTD MODULE CHANNEL 0 AUTOCALIBRATION ENABLED"
+
+Addr: B3
+Slot: 2
+Terminal: 6
+Description: "SLOT 10 RTD MODULE CHANNEL 1 AUTOCALIBRATION ENABLED"
+
+Addr: B3
+Slot: 2
+Terminal: 7
+Description: "SLOT 10 RTD MODULE CHANNEL 2 AUTOCALIBRATION ENABLED"
+
+Addr: B3
+Slot: 2
+Terminal: 8
+Description: "SLOT 10 RTD MODULE CHANNEL 3 AUTOCALIBRATION ENABLED"
+
+Addr: B3
+Slot: 2
+Terminal: 9
+Description: "SLOT 10 RTD MODULE CHANNEL 4 AUTOCALIBRATION ENABLED"
+
+Addr: B3
+Slot: 2
+Terminal: 10
+Description: "SLOT 10 RTD MODULE CHANNEL 5 AUTOCALIBRATION ENABLED"
+
+Addr: B3
+Slot: 2
+Terminal: 11
+Description: "SLOT 10 RTD MODULE CHANNEL 6 AUTOCALIBRATION ENABLED"
+
+Addr: B3
+Slot: 2
+Terminal: 12
+Description: "SLOT 10 RTD MODULE CHANNEL 7 AUTOCALIBRATION ENABLED"
+
+Addr: B3
+Slot: 2
+Terminal: 14
+Description: "SLOT 10 RTD MODULE CHANNEL 0 AUTOCALIBRATION ONE-SHOT"
+
+Addr: B3
+Slot: 2
+Terminal: 15
+Description: "SLOT 10 RTD MODULE CHANNEL 1 AUTOCALIBRATION ONE-SHOT"
+
+Addr: B3
+Slot: 3
+Terminal: 0
+Description: "SLOT 10 RTD MODULE CHANNEL 2 AUTOCALIBRATION ONE-SHOT"
+
+Addr: B3
+Slot: 3
+Terminal: 1
+Description: "SLOT 10 RTD MODULE CHANNEL 3 AUTOCALIBRATION ONE-SHOT"
+
+Addr: B3
+Slot: 3
+Terminal: 2
+Description: "SLOT 10 RTD MODULE CHANNEL 4 AUTOCALIBRATION ONE-SHOT"
+
+Addr: B3
+Slot: 3
+Terminal: 3
+Description: "SLOT 10 RTD MODULE CHANNEL 5 AUTOCALIBRATION ONE-SHOT"
+
+Addr: B3
+Slot: 3
+Terminal: 4
+Description: "SLOT 10 RTD MODULE CHANNEL 6 AUTOCALIBRATION ONE-SHOT"
+
+Addr: B3
+Slot: 3
+Terminal: 5
+Description: "SLOT 10 RTD MODULE CHANNEL 7 AUTOCALIBRATION ONE-SHOT"
+
+Addr: B3
+Slot: 3
+Terminal: 6
+Description: "    "
+
+Addr: B3
+Slot: 3
+Terminal: 7
+Description: "SLOT 11 CHANNEL 0 PRESS. SENSOR LOW LIMIT DETECT "
+
+Addr: B3
+Slot: 3
+Terminal: 8
+Description: "SLOT 11 CHANNEL 1 PRESS. SENSOR LOW LIMIT DETECT "
+
+Addr: B3
+Slot: 3
+Terminal: 9
+Description: "SLOT 11 CHANNEL 2 PRESS. SENSOR LOW LIMIT DETECT "
+
+Addr: B3
+Slot: 3
+Terminal: 10
+Description: "SLOT 11 CHANNEL 3 VESSEL LEVEL LOW LIMIT DETECT "
+
+Addr: B3
+Slot: 3
+Terminal: 12
+Description: "SLOT 11 CHANNEL 0 PRESS. SENSOR HIGH LIMIT DETECT "
+
+Addr: B3
+Slot: 3
+Terminal: 13
+Description: "SLOT 11 CHANNEL 1 PRESS. SENSOR HIGH LIMIT DETECT "
+
+Addr: B3
+Slot: 3
+Terminal: 14
+Description: "SLOT 11 CHANNEL 2 PRESS. SENSOR HIGH LIMIT DETECT "
+
+Addr: B3
+Slot: 3
+Terminal: 15
+Description: "SLOT 11 CHANNEL 3 VESSEL LEVEL HIGH LIMIT DETECT "
+
+Addr: B3
+Slot: 4
+Terminal: 0
+Description: "AU-1A t1 ACTIVE   "
+
+Addr: B3
+Slot: 4
+Terminal: 1
+Description: "SLOT 11 CHANNEL 0 PRESS. SENSOR ENABLED "
+
+Addr: B3
+Slot: 4
+Terminal: 2
+Description: "SLOT 11 CHANNEL 1 PRESS. SENSOR ENABLED "
+
+Addr: B3
+Slot: 4
+Terminal: 3
+Description: "SLOT 11 CHANNEL 2 PRESS. SENSOR ENABLED "
+
+Addr: B3
+Slot: 4
+Terminal: 4
+Description: "SLOT 11 CHANNEL 3 VESSEL LEVEL ENABLED "
+
+Addr: B3
+Slot: 4
+Terminal: 5
+Description: "AU-1A t6 ACTIVE   "
+
+Addr: B3
+Slot: 4
+Terminal: 7
+Description: "MODE OF AU-1A 0 = FREEZER 1 = COOLER  "
+
+Addr: B3
+Slot: 4
+Terminal: 14
+Description: "AU-1A L=DFSTING   "
+
+Addr: B3
+Slot: 4
+Terminal: 15
+Description: "1 MOM= FORCE DFST AU-1A  "
+
+Addr: B3
+Slot: 5
+Terminal: 0
+Description: "COMPRESSOR 2 COMMUNICATION FAILURE ALARM STATUS BIT "
+
+Addr: B3
+Slot: 5
+Terminal: 1
+Description: "COMPRESSOR 3 COMMUNICATION FAILURE ALARM STATUS BIT "
+
+Addr: B3
+Slot: 5
+Terminal: 3
+Description: "SLOT 1 MODBUS MODULE USER FORCED CONFIGURATION ENABLE BIT"
+
+Addr: B3
+Slot: 5
+Terminal: 4
+Description: "SLOT 1 MODBUS MODULE USER FORCED CONFIGURATION ONE SHOT"
+
+Addr: B3
+Slot: 5
+Terminal: 6
+Description: "COMPRESSOR #2 AUTO MODE COMMAND ENABLE ONE SHOT  "
+
+Addr: B3
+Slot: 5
+Terminal: 7
+Description: "COMPRESSOR #3 AUTO MODE COMMAND ENABLE ONE SHOT  "
+
+Addr: B3
+Slot: 5
+Terminal: 10
+Description: "COMPRESSOR 2 STOP COMMAND UNLATCH ONE-SHOT "
+
+Addr: B3
+Slot: 5
+Terminal: 11
+Description: "COMPRESSOR 3 STOP COMMAND UNLATCH ONE-SHOT "
+
+Addr: B3
+Slot: 5
+Terminal: 13
+Description: "COMPRESSOR 2 STOP COMMAND LATCH ONE-SHOT  "
+
+Addr: B3
+Slot: 5
+Terminal: 14
+Description: "COMPRESSOR 3 STOP COMMAND LATCH ONE-SHOT  "
+
+Addr: B3
+Slot: 6
+Terminal: 0
+Description: "COMPRESSOR 2 CENTRAL MODE COMMAND UNLATCH ONE-SHOT "
+
+Addr: B3
+Slot: 6
+Terminal: 1
+Description: "COMPRESSOR 3 CENTRAL MODE COMMAND UNLATCH ONE-SHOT "
+
+Addr: B3
+Slot: 6
+Terminal: 3
+Description: "COMPRESSOR 2 LOCAL MODE COMMAND UNLATCH ONE-SHOT "
+
+Addr: B3
+Slot: 6
+Terminal: 4
+Description: "COMPRESSOR 3 LOCAL MODE COMMAND UNLATCH ONE-SHOT "
+
+Addr: B3
+Slot: 6
+Terminal: 6
+Description: "COMPRESSOR 2 AUTO MODE UNLATCH ONE-SHOT "
+
+Addr: B3
+Slot: 6
+Terminal: 7
+Description: "COMPRESSOR 3 AUTO MODE COMMAND UNLATCH ONE-SHOT "
+
+Addr: B3
+Slot: 6
+Terminal: 11
+Description: "COMPRESSOR 2 AUTO MODE PERMISSIVE BIT  "
+
+Addr: B3
+Slot: 6
+Terminal: 12
+Description: "COMPRESSOR 3 AUTO MODE PERMISSIVE BIT  "
+
+Addr: B3
+Slot: 6
+Terminal: 14
+Description: "LOW STAGE COMPRESSOR RUN ENABLE PERMISSIVE BIT "
+
+Addr: B3
+Slot: 6
+Terminal: 15
+Description: "HIGH STAGE RUN PERMISSIVE BIT  "
+
+Addr: B3
+Slot: 7
+Terminal: 2
+Description: "COMPRESSOR 2 OK TO RUN PERMISSIVE  "
+
+Addr: B3
+Slot: 7
+Terminal: 3
+Description: "COMPRESSOR 3 OK TO RUN PERMISSIVE  "
+
+Addr: B3
+Slot: 7
+Terminal: 6
+Description: "COMPRESSOR 2 AT MINIMUM CAPACITY STATUS BIT  "
+
+Addr: B3
+Slot: 7
+Terminal: 7
+Description: "COMPRESSOR 3 AT MINIMUM CAPACITY STATUS BIT  "
+
+Addr: B3
+Slot: 7
+Terminal: 10
+Description: "COMPRESSOR #2 MAX RUNTIME @ MIN CAPACITY STOP COMMAND ONE SHOT"
+
+Addr: B3
+Slot: 7
+Terminal: 11
+Description: "COMPRESSOR #3 MAX RUNTIME @ MIN CAPACITY STOP COMMAND ONE SHOT"
+
+Addr: B3
+Slot: 7
+Terminal: 14
+Description: "COMPRESSOR 2 FORCE EXPIRATION MINIMUM CAPACITY TIMER ONE SHOT"
+
+Addr: B3
+Slot: 7
+Terminal: 15
+Description: "COMPRESSOR 3 FORCE EXPIRATION MINIMUM CAPACITY TIMER ONE SHOT"
+
+Addr: B3
+Slot: 8
+Terminal: 3
+Description: "COMPRESSOR 2 AT MAXIMUM CAPACITY STATUS BIT "
+
+Addr: B3
+Slot: 8
+Terminal: 4
+Description: "COMPRESSOR 3 AT MAXIMUM CAPACITY STATUS BIT "
+
+Addr: B3
+Slot: 8
+Terminal: 7
+Description: "COMPRESSOR 1 ANTIRECYCLE ACTIVE STATUS BIT "
+
+Addr: B3
+Slot: 8
+Terminal: 8
+Description: "COMPRESSOR 2 ANTIRECYCLE ACTIVE STATUS BIT "
+
+Addr: B3
+Slot: 8
+Terminal: 9
+Description: "COMPRESSOR 3 ANTIRECYCLE ACTIVE STATUS BIT "
+
+Addr: B3
+Slot: 8
+Terminal: 12
+Description: "COMPRESSOR 2 WAIT STATE ACTIVE STATUS BIT "
+
+Addr: B3
+Slot: 8
+Terminal: 13
+Description: "COMPRESSOR 3 WAIT STATE ACTIVE STATUS BIT "
+
+Addr: B3
+Slot: 9
+Terminal: 1
+Description: "1ST L.S. COMPRESSOR WAITING  "
+
+Addr: B3
+Slot: 9
+Terminal: 2
+Description: "2ND L.S. COMPRESSOR WAITING  "
+
+Addr: B3
+Slot: 9
+Terminal: 4
+Description: "1ST L.S. COMPRESSOR AT MAXIMUM CAPACITY "
+
+Addr: B3
+Slot: 9
+Terminal: 5
+Description: "2ND L.S. COMPRESSOR AT MAXIMUM CAPACITY "
+
+Addr: B3
+Slot: 9
+Terminal: 7
+Description: "1ST L.S. COMPRESSOR AT MINIMUM CAPACITY "
+
+Addr: B3
+Slot: 9
+Terminal: 8
+Description: "2ND L.S. COMPRESSOR AT MINIMUM CAPACITY "
+
+Addr: B3
+Slot: 9
+Terminal: 10
+Description: "RUN ENABLE OF 1ST L.S. COMPRESSOR  "
+
+Addr: B3
+Slot: 9
+Terminal: 11
+Description: "RUN ENABLE OF 2ND L.S. COMPRESSOR  "
+
+Addr: B3
+Slot: 9
+Terminal: 13
+Description: "ALLOW START OF 1ST L.S. COMPRESSOR  "
+
+Addr: B3
+Slot: 9
+Terminal: 14
+Description: "ALLOW START OF 2ND L.S. COMPRESSOR  "
+
+Addr: B3
+Slot: 10
+Terminal: 0
+Description: "ALLOW LOADING OF 1ST L.S. COMPRESSOR  "
+
+Addr: B3
+Slot: 10
+Terminal: 1
+Description: "ALLOW LOADING OF 2ND L.S. COMPRESSOR  "
+
+Addr: B3
+Slot: 10
+Terminal: 3
+Description: "ALLOW UNLOADING OF 1ST L.S. COMPRESSOR  "
+
+Addr: B3
+Slot: 10
+Terminal: 4
+Description: "ALLOW UNLOADING OF 2ND L.S. COMPRESSOR  "
+
+Addr: B3
+Slot: 10
+Terminal: 6
+Description: "COMPRESSOR 2 AUTO MODE COMMAND LATCH ONE-SHOT "
+
+Addr: B3
+Slot: 10
+Terminal: 7
+Description: "COMPRESSOR 3 AUTO MODE COMMAND LATCH ONE-SHOT "
+
+Addr: B3
+Slot: 10
+Terminal: 9
+Description: "MODBUS COMMAND ONE-SHOT   "
+
+Addr: B3
+Slot: 10
+Terminal: 10
+Description: "MODBUS COMMAND ONE-SHOT   "
+
+Addr: B3
+Slot: 10
+Terminal: 12
+Description: "COMPRESSOR 2 MANUAL MODE PERMISSIVE BIT  "
+
+Addr: B3
+Slot: 10
+Terminal: 13
+Description: "COMPRESSOR 3 MANUAL MODE PERMISSIVE BIT  "
+
+Addr: B3
+Slot: 10
+Terminal: 15
+Description: "DON'T RUN CONDENSERS   "
+
+Addr: B3
+Slot: 11
+Terminal: 1
+Description: "CONDENSER STEP ONE-SHOT   "
+
+Addr: B3
+Slot: 11
+Terminal: 3
+Description: "CONDENSER PUMP #1 FEEBACK ALARM  "
+
+Addr: B3
+Slot: 11
+Terminal: 4
+Description: "CONDENSER PUMP #2 RUN FEEDBACK ALARM "
+
+Addr: B3
+Slot: 11
+Terminal: 5
+Description: "CONDENSER FAN RUN FEEDBACK ALARM  "
+
+Addr: B3
+Slot: 11
+Terminal: 6
+Description: "FREEZER #1 FAN RUN FEEDBACK ALARM "
+
+Addr: B3
+Slot: 11
+Terminal: 7
+Description: "FREEZER #2 FAN RUN FEEDBACK ALARM "
+
+Addr: B3
+Slot: 11
+Terminal: 8
+Description: "FREEZER #3 FAN RUN FEEDBACK ALARM  "
+
+Addr: B3
+Slot: 11
+Terminal: 9
+Description: "FREEZER #4 FAN RUN FEEDBACK ALARM  "
+
+Addr: B3
+Slot: 11
+Terminal: 12
+Description: "DOCK #1 FAN RUN FEEDBACK ALARM  "
+
+Addr: B3
+Slot: 11
+Terminal: 13
+Description: "DOCK #2 FAN RUN FEEDBACK ALARM  "
+
+Addr: B3
+Slot: 11
+Terminal: 14
+Description: "DOCK #3 FAN RUN FEEDBACK ALARM  "
+
+Addr: B3
+Slot: 11
+Terminal: 15
+Description: "COOLER FAN RUN FEEDBACK ALARM  "
+
+Addr: B3
+Slot: 12
+Terminal: 0
+Description: "PALLETIZER FAN RUN FEEDBACK ALARM  "
+
+Addr: B3
+Slot: 12
+Terminal: 2
+Description: "HIGH DISCHARGE PRESSURE SHUTDOWN   "
+
+Addr: B3
+Slot: 12
+Terminal: 8
+Description: "FREEZER #1 T1 ACTIVE   "
+
+Addr: B3
+Slot: 12
+Terminal: 9
+Description: "FREEZER #1 T2 ACTIVE   "
+
+Addr: B3
+Slot: 12
+Terminal: 10
+Description: "FREEZER #1 T3 ACTIVE   "
+
+Addr: B3
+Slot: 12
+Terminal: 11
+Description: "FREEZER #1 T4 ACTIVE   "
+
+Addr: B3
+Slot: 12
+Terminal: 12
+Description: "FREEZER #1 T5 ACTIVE   "
+
+Addr: B3
+Slot: 12
+Terminal: 13
+Description: "FREEZER #1 T6 ACTIVE   "
+
+Addr: B3
+Slot: 12
+Terminal: 14
+Description: "FREEZER #1 1 = FORCE DEFROST   "
+
+Addr: B3
+Slot: 12
+Terminal: 15
+Description: "FREEZER #1 DEFROSTING   "
+
+Addr: B3
+Slot: 13
+Terminal: 1
+Description: "FREEZER #2 T1 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 2
+Description: "FREEZER #2 T2 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 3
+Description: "FREEZER #2 T3 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 4
+Description: "FREEZER #2 T4 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 5
+Description: "FREEZER #2 T5 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 6
+Description: "FREEZER #2 T6 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 7
+Description: "FREEZER #2 1 = FORCE DEFROST   "
+
+Addr: B3
+Slot: 13
+Terminal: 8
+Description: "FREEZER #2 DEFROSTING   "
+
+Addr: B3
+Slot: 13
+Terminal: 10
+Description: "FREEZER #3 T1 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 11
+Description: "FREEZER #3 T2 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 12
+Description: "FREEZER #3 T3 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 13
+Description: "FREEZER #3 T4 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 14
+Description: "FREEZER #3 T5 ACTIVE   "
+
+Addr: B3
+Slot: 13
+Terminal: 15
+Description: "FREEZER #3 T6 ACTIVE   "
+
+Addr: B3
+Slot: 14
+Terminal: 0
+Description: "FREEZER #3 1 = FORCE DEFROST   "
+
+Addr: B3
+Slot: 14
+Terminal: 1
+Description: "FREEZER #3 DEFROSTING   "
+
+Addr: B3
+Slot: 14
+Terminal: 3
+Description: "FREEZER #4 T1 ACTIVE   "
+
+Addr: B3
+Slot: 14
+Terminal: 4
+Description: "FREEZER #4 T2 ACTIVE   "
+
+Addr: B3
+Slot: 14
+Terminal: 5
+Description: "FREEZER #4 T3 ACTIVE   "
+
+Addr: B3
+Slot: 14
+Terminal: 6
+Description: "FREEZER #4 T4 ACTIVE   "
+
+Addr: B3
+Slot: 14
+Terminal: 7
+Description: "FREEZER #4 T5 ACTIVE   "
+
+Addr: B3
+Slot: 14
+Terminal: 8
+Description: "FREEZER #4 T6 ACTIVE   "
+
+Addr: B3
+Slot: 14
+Terminal: 9
+Description: "FREEZER #4 1 = FORCE DEFROST   "
+
+Addr: B3
+Slot: 14
+Terminal: 10
+Description: "FREEZER #4 DEFROSTING   "
+
+Addr: B3
+Slot: 14
+Terminal: 12
+Description: "COOLER T1 ACTIVE   "
+
+Addr: B3
+Slot: 14
+Terminal: 13
+Description: "COOLER T2 ACTIVE   "
+
+Addr: B3
+Slot: 14
+Terminal: 14
+Description: "COOLER T3 ACTIVE   "
+
+Addr: B3
+Slot: 14
+Terminal: 15
+Description: "COOLER T4 ACTIVE   "
+
+Addr: B3
+Slot: 15
+Terminal: 0
+Description: "COOLER T5 ACTIVE   "
+
+Addr: B3
+Slot: 15
+Terminal: 1
+Description: "COOLER T6 ACTIVE   "
+
+Addr: B3
+Slot: 15
+Terminal: 2
+Description: "COOLER 1 = FORCE DEFROST   "
+
+Addr: B3
+Slot: 15
+Terminal: 3
+Description: "COOLER DEFROSTING   "
+
+Addr: B3
+Slot: 15
+Terminal: 5
+Description: "PALLETIZER T1 ACTIVE   "
+
+Addr: B3
+Slot: 15
+Terminal: 6
+Description: "PALLETIZER T2 ACTIVE   "
+
+Addr: B3
+Slot: 15
+Terminal: 7
+Description: "PALLETIZER T3 ACTIVE   "
+
+Addr: B3
+Slot: 15
+Terminal: 8
+Description: "PALLETIZER T4 ACTIVE   "
+
+Addr: B3
+Slot: 15
+Terminal: 9
+Description: "PALLETIZER T5 ACTIVE   "
+
+Addr: B3
+Slot: 15
+Terminal: 10
+Description: "PALLETIZER T6 ACTIVE   "
+
+Addr: B3
+Slot: 15
+Terminal: 11
+Description: "PALLETIZER 1 = FORCE DEFROST   "
+
+Addr: B3
+Slot: 15
+Terminal: 12
+Description: "PALLETIZER DEFROSTING   "
+
+Addr: B3
+Slot: 15
+Terminal: 15
+Description: "COMPRESSOR 1 MOTOR STARTER FAILURE  "
+
+Addr: B3
+Slot: 16
+Terminal: 0
+Description: "COMPRESSOR 1 SEQUENCE ON   "
+
+Addr: B3
+Slot: 16
+Terminal: 1
+Description: "COMPRESSOR 1 66% SV   "
+
+Addr: B3
+Slot: 16
+Terminal: 2
+Description: "COMPRESSOR 1 33% SV   "
+
+Addr: B3
+Slot: 17
+Terminal: 0
+Description: "COMPRESSOR 1 MS FAIL OR NOT SAFE OR NOT AUTO "
+
+Addr: B3
+Slot: 17
+Terminal: 1
+Description: "COMPRESSOR 1 AT 100% CAPACITY   "
+
+Addr: C5
+Slot: 0
+Terminal: DN
+Description: "FREEZER #1 DEFROST MIN   "
+
+Addr: I
+Slot: 1
+Terminal: 0
+Description: "MODBUS MODULE REGISTER TRANSFER ENABLE BIT  "
+
+Addr: I
+Slot: 2
+Terminal: 0
+Description: "COMPRESSOR 1 HAND MODE   "
+
+Addr: I
+Slot: 2
+Terminal: 1
+Description: "COMPRESSOR 1 AUTO MODE   "
+
+Addr: I
+Slot: 2
+Terminal: 2
+Description: "COMPRESSOR #2 SELECTOR SWITCH IN HAND MODE POSITION "
+
+Addr: I
+Slot: 2
+Terminal: 3
+Description: "COMPRESSOR #2 SELECTOR SWITCH IN AUTO MODE POSITION "
+
+Addr: I
+Slot: 2
+Terminal: 4
+Description: "COMPRESSOR #3 SELECTOR SWITCH IN HAND MODE POSITION "
+
+Addr: I
+Slot: 2
+Terminal: 5
+Description: "COMPRESSOR #3 SELECTOR SWITCH IN AUTO MODE POSITION "
+
+Addr: I
+Slot: 2
+Terminal: 8
+Description: "CONDENSER PUMP #1 HAND MODE  "
+
+Addr: I
+Slot: 2
+Terminal: 9
+Description: "CONDENSER PUMP #1 IN AUTO MODE  "
+
+Addr: I
+Slot: 2
+Terminal: 10
+Description: "CONDENSER PUMP #2 HAND MODE  "
+
+Addr: I
+Slot: 2
+Terminal: 11
+Description: "CONDENSER PUMP #2 IN AUTO MODE  "
+
+Addr: I
+Slot: 2
+Terminal: 12
+Description: "CONDENSER FAN HAND MODE  "
+
+Addr: I
+Slot: 2
+Terminal: 13
+Description: "CONDENSER FAN IN AUTO MODE  "
+
+Addr: I
+Slot: 2
+Terminal: 14
+Description: "FREEZER #1 HAND MODE   "
+
+Addr: I
+Slot: 2
+Terminal: 15
+Description: "FREEZER #1 IN AUTO MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 0
+Description: "FREEZER #2 HAND MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 1
+Description: "FREEZER #2 IN AUTO MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 2
+Description: "FREEZER #3 HAND MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 3
+Description: "FREEZER #3 IN AUTO MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 4
+Description: "FREEZER #4 HAND MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 5
+Description: "FREEZER #4 AUTO POSITION   "
+
+Addr: I
+Slot: 3
+Terminal: 10
+Description: "DOCK #1 HAND MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 11
+Description: "DOCK #1 AUTO MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 12
+Description: "DOCK #2 HAND MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 13
+Description: "DOCK #2 AUTO MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 14
+Description: "DOCK #3 HAND MODE   "
+
+Addr: I
+Slot: 3
+Terminal: 15
+Description: "DOCK #3 AUTO MODE   "
+
+Addr: I
+Slot: 4
+Terminal: 0
+Description: "COOLER HAND MODE   "
+
+Addr: I
+Slot: 4
+Terminal: 1
+Description: "COOLER AUTO MODE   "
+
+Addr: I
+Slot: 4
+Terminal: 2
+Description: "PALLETIZER HAND MODE   "
+
+Addr: I
+Slot: 4
+Terminal: 3
+Description: "PALLETIZER AUTO MODE   "
+
+Addr: I
+Slot: 4
+Terminal: 4
+Description: "CONDENSER PUMP #1 RUN FEEDBACK 1 = OK "
+
+Addr: I
+Slot: 4
+Terminal: 5
+Description: "CONDENSER PUMP #2 RUN FEEDBACK 1 = OK "
+
+Addr: I
+Slot: 4
+Terminal: 6
+Description: "CONDENSER FAN RUN FEEDBACK  "
+
+Addr: I
+Slot: 4
+Terminal: 7
+Description: "FREEZER #1 FAN RUN FEEDBACK OK  "
+
+Addr: I
+Slot: 4
+Terminal: 8
+Description: "FREEZER #2 FAN RUN FEEDBACK  "
+
+Addr: I
+Slot: 4
+Terminal: 9
+Description: "FREEZER #3 FAN RUN FEEDBACK OK  "
+
+Addr: I
+Slot: 4
+Terminal: 10
+Description: "FREEZER #4 FAN RUN FEEDBACK OK  "
+
+Addr: I
+Slot: 4
+Terminal: 11
+Description: "    "
+
+Addr: I
+Slot: 4
+Terminal: 13
+Description: "DOCK #1 FAN RUN FEEDBACK OK  "
+
+Addr: I
+Slot: 4
+Terminal: 14
+Description: "DOCK #2 FAN RUN FEEDBACK OK  "
+
+Addr: I
+Slot: 4
+Terminal: 15
+Description: "DOCK #3 FAN RUN FEEDBACK OK  "
+
+Addr: I
+Slot: 5
+Terminal: 0
+Description: "COOLER FAN RUN FEEDBACK OK  "
+
+Addr: I
+Slot: 5
+Terminal: 1
+Description: "PALLETIZER FAN RUN FEEDBACK OK  "
+
+Addr: I
+Slot: 5
+Terminal: 2
+Description: "CONTROL POWER PRESENT (1=OK) "
+
+Addr: I
+Slot: 5
+Terminal: 3
+Description: "EMERGENCY STOP NOT PRESSED (1=OK) "
+
+Addr: I
+Slot: 5
+Terminal: 5
+Description: "AMMONIA DETECTOR ALARM   "
+
+Addr: I
+Slot: 5
+Terminal: 6
+Description: "COMPRESSOR 1 RUN SIGNAL   "
+
+Addr: I
+Slot: 5
+Terminal: 7
+Description: "COMPRESSOR 1 SAFETIES 1 = OK  "
+
+Addr: I
+Slot: 10
+Terminal: 0
+Description: "AU-1A AUTO SW    "
+
+Addr: I
+Slot: 10
+Terminal: 139
+Description: "SLOT 10 RTD MODULE CHANNEL 0 CHANNEL ENABLE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 140
+Description: "SLOT 10 RTD MODULE CHANNEL 0 CALIBRATE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 141
+Description: "SLOT 10 RTD MODULE CHANNEL 0 BROKEN INPUT STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 142
+Description: "SLOT 10 RTD MODULE CHANNEL 0 OUT OF RANGE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 143
+Description: "SLOT 10 RTD MODULE CHANNEL 0 CONFIGURE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 155
+Description: "SLOT 10 RTD MODULE CHANNEL 1 CHANNEL ENABLE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 156
+Description: "SLOT 10 RTD MODULE CHANNEL 1 CALIBRATE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 157
+Description: "SLOT 10 RTD MODULE CHANNEL 1 BROKEN INPUT STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 158
+Description: "SLOT 10 RTD MODULE CHANNEL 1 OUT OF RANGE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 159
+Description: "SLOT 10 RTD MODULE CHANNEL 1 CONFIGURE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 171
+Description: "SLOT 10 RTD MODULE CHANNEL 2 CHANNEL ENABLE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 172
+Description: "SLOT 10 RTD MODULE CHANNEL 2 CALIBRATE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 173
+Description: "SLOT 10 RTD MODULE CHANNEL 2 BROKEN INPUT STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 174
+Description: "SLOT 10 RTD MODULE CHANNEL 2 OUT OF RANGE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 175
+Description: "SLOT 10 RTD MODULE CHANNEL 2 CONFIGURE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 187
+Description: "SLOT 10 RTD MODULE CHANNEL 3 CHANNEL ENABLE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 188
+Description: "SLOT 10 RTD MODULE CHANNEL 3 CALIBRATE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 189
+Description: "SLOT 10 RTD MODULE CHANNEL 3 BROKEN INPUT STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 190
+Description: "SLOT 10 RTD MODULE CHANNEL 3 OUT OF RANGE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 191
+Description: "SLOT 10 RTD MODULE CHANNEL 3 CONFIGURE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 203
+Description: "SLOT 10 RTD MODULE CHANNEL 4 CHANNEL ENABLE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 204
+Description: "SLOT 10 RTD MODULE CHANNEL 4 CALIBRATE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 205
+Description: "SLOT 10 RTD MODULE CHANNEL 4 BROKEN INPUT STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 206
+Description: "SLOT 10 RTD MODULE CHANNEL 4 OUT OF RANGE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 207
+Description: "SLOT 10 RTD MODULE CHANNEL 4 CONFIGURE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 219
+Description: "SLOT 10 RTD MODULE CHANNEL 5 CHANNEL ENABLE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 220
+Description: "SLOT 10 RTD MODULE CHANNEL 5 CALIBRATE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 221
+Description: "SLOT 10 RTD MODULE CHANNEL 5 BROKEN INPUT STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 222
+Description: "SLOT 10 RTD MODULE CHANNEL 5 OUT OF RANGE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 223
+Description: "SLOT 10 RTD MODULE CHANNEL 5 CONFIGURE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 235
+Description: "SLOT 10 RTD MODULE CHANNEL 6 CHANNEL ENABLE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 236
+Description: "SLOT 10 RTD MODULE CHANNEL 6 CALIBRATE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 237
+Description: "SLOT 10 RTD MODULE CHANNEL 6 BROKEN INPUT STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 238
+Description: "SLOT 10 RTD MODULE CHANNEL 6 OUT OF RANGE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 239
+Description: "SLOT 10 RTD MODULE CHANNEL 6 CONFIGURE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 251
+Description: "SLOT 10 RTD MODULE CHANNEL 7 CHANNEL ENABLE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 252
+Description: "SLOT 10 RTD MODULE CHANNEL 7 CALIBRATE ERROR STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 253
+Description: "SLOT 10 RTD MODULE CHANNEL 7 BROKEN INPUT STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 254
+Description: "SLOT 10 RTD MODULE CHANNEL 7 OUT OF RANGE STATUS BIT"
+
+Addr: I
+Slot: 10
+Terminal: 255
+Description: "SLOT 10 RTD MODULE CHANNEL 7 CONFIGURE ERROR STATUS BIT"
+
+Addr: I
+Slot: 15
+Terminal: 3
+Description: "+10 DEG SUCTION TRAP HIGH LEVEL TRIP  "
+
+Addr: I
+Slot: 15
+Terminal: 4
+Description: "-25 DEG SUCTION TRAP HIGH LEVEL TRIP  "
+
+Addr: N11
+Slot: 0
+Terminal: 0
+Description: "COMPRESSOR 2 AUTO MODE STATUS BIT  "
+
+Addr: N11
+Slot: 0
+Terminal: 1
+Description: "COMPRESSOR 2 MANUAL MODE STATUS BIT  "
+
+Addr: N11
+Slot: 0
+Terminal: 2
+Description: "COMPRESSOR 2 COMPRESSOR ON STATUS BIT (1 = COMP ON) "
+
+Addr: N11
+Slot: 0
+Terminal: 3
+Description: "COMPRESSOR 2 REMOTE MODE STATUS BIT  "
+
+Addr: N11
+Slot: 0
+Terminal: 4
+Description: "COMPRESSOR 2 VISSION POWER UP DONE BIT  "
+
+Addr: N11
+Slot: 0
+Terminal: 5
+Description: "COMPRESSOR 2 CENTRAL COMPUTER MODE (1=CENTRAL) "
+
+Addr: N11
+Slot: 0
+Terminal: 6
+Description: "COMPRESSOR 2 ALARM ACTIVE STATUS BIT (1=ALARM) "
+
+Addr: N11
+Slot: 0
+Terminal: 7
+Description: "COMPRESSOR 2 TRIP ACTIVE STATUS BIT (1 = TRIP ACTIVE) "
+
+Addr: N11
+Slot: 0
+Terminal: 10
+Description: "COMPRESSOR 2 WAITING ON HOT START/ANTIRECYCL STATUS BIT (1 = WAITING)"
+
+Addr: N11
+Slot: 1
+Terminal: 0
+Description: "COMPRESSOR 2 WAITING ON SUCTION PRESSURE STATUS BIT (1=WAITING)"
+
+Addr: N11
+Slot: 1
+Terminal: 1
+Description: "COMPRESSOR 2 WAITING ON REMOTE COMMAND STATUS BIT (1=WAITING)"
+
+Addr: N11
+Slot: 1
+Terminal: 2
+Description: "COMPRESSOR 2 WAITING ON HOT START/ANTRECYCL STATUS BIT (1=WAITING)"
+
+Addr: N11
+Slot: 1
+Terminal: 3
+Description: "COMPRESSOR 2 WAITING ON PROCESS TEMP STATUS BIT (1=WAITING)"
+
+Addr: N11
+Slot: 1
+Terminal: 4
+Description: "COMPRESSOR 2 WAITING ON PERCENT CAPACITY STATUS BIT (1=WAITING)"
+
+Addr: N11
+Slot: 1
+Terminal: 5
+Description: "COMPRESSOR 2 WAITING ON PERCENT VOLUME STATUS BIT (1=WAITING)"
+
+Addr: N11
+Slot: 1
+Terminal: 6
+Description: "COMPRESSOR 2 WAITING ON START OIL PRESS. STATUS BIT (1=WAITING)"
+
+Addr: N11
+Slot: 1
+Terminal: 7
+Description: "COMPRESSOR 2 WAITING ON REMOTE ON/OFF INPUT STATUS BIT (1=WAITING)"
+
+Addr: N11
+Slot: 4
+Terminal: 9
+Description: "COMPRESSOR 2 FULL LOAD AMPS LOAD LIMIT STATUS BIT (1=LOAD LIMIT)"
+
+Addr: N12
+Slot: 0
+Terminal: 0
+Description: "COMPRESSOR 3 AUTO MODE STATUS BIT  "
+
+Addr: N12
+Slot: 0
+Terminal: 1
+Description: "COMPRESSOR 3 MANUAL MODE STATUS BIT  "
+
+Addr: N12
+Slot: 0
+Terminal: 2
+Description: "COMPRESSOR 3 COMPRESSOR ON STATUS BIT (1 = COMP ON) "
+
+Addr: N12
+Slot: 0
+Terminal: 3
+Description: "COMPRESSOR 3 REMOTE MODE STATUS BIT  "
+
+Addr: N12
+Slot: 0
+Terminal: 4
+Description: "COMPRESSOR 3 VISSION POWERUP DONE BIT  "
+
+Addr: N12
+Slot: 0
+Terminal: 5
+Description: "COMPRESSOR 3 CENTRAL COMPUTER MODE STATUS BIT (1=CENTRAL) "
+
+Addr: N12
+Slot: 0
+Terminal: 6
+Description: "COMPRESSOR 3 ALARM ACTIVE STATUS BIT (1=ALARM) "
+
+Addr: N12
+Slot: 0
+Terminal: 7
+Description: "COMPRESSOR 3 TRIP ACTIVE STATUS BIT (1 = TRIP ACTIVE) "
+
+Addr: N12
+Slot: 0
+Terminal: 10
+Description: "COMPRESSOR 3 WAITING ON HOT STARTS/ANTIRECYC STATUS BIT (1 = WAITING)"
+
+Addr: N12
+Slot: 1
+Terminal: 0
+Description: "COMPRESSOR 3 WAITING ON SUCTION PRESS. STATUS BIT (1=WAITING)"
+
+Addr: N12
+Slot: 1
+Terminal: 1
+Description: "COMPRESSOR 3 WAITING ON REMOTE COMMAND STATUS BIT (1=WAITING)"
+
+Addr: N12
+Slot: 1
+Terminal: 2
+Description: "COMPRESSOR 3 WAITING ON HOT STARTS/ANTIRECYC STATUS BIT (1=WAITING)"
+
+Addr: N12
+Slot: 1
+Terminal: 3
+Description: "COMPRESSOR 3 WAITING ON PROCESS TEMP STATUS BIT (1=WAITING)"
+
+Addr: N12
+Slot: 1
+Terminal: 4
+Description: "COMPRESSOR 3 WAITING ON PERCENT CAPACITY STATUS BIT (1=WAITING)"
+
+Addr: N12
+Slot: 1
+Terminal: 5
+Description: "COMPRESSOR 3 WAITING ON PERCENT VOLUME STATUS BIT (1=WAITING)"
+
+Addr: N12
+Slot: 1
+Terminal: 6
+Description: "COMPRESSOR 3 WAITING ON START OIL PRESS. STATUS BIT (1=WAITING)"
+
+Addr: N12
+Slot: 1
+Terminal: 7
+Description: "COMPRESSOR 3 WAITING ON REMOTE ON/OFF INPUT STATUS BIT (1=WAITING)"
+
+Addr: N12
+Slot: 4
+Terminal: 9
+Description: "COMPRESSOR 3 FULL LOAD AMPS LOAD LIMIT STATUS BIT (1=LOAD LIMIT)"
+
+Addr: N25
+Slot: 70
+Terminal: 0
+Description: "SLOT 1 MODBUS MODULE PORT 1 COMMAND LIST END OF POLL STATUS BIT"
+
+Addr: N26
+Slot: 1
+Terminal: 0
+Description: "COMPRESSOR 2 STOP COMMAND ENABLE BIT (1 = STOP) "
+
+Addr: N26
+Slot: 1
+Terminal: 1
+Description: "COMPRESSOR 2 AUTO MODE ENABLE BIT (1 = AUTO) "
+
+Addr: N26
+Slot: 1
+Terminal: 4
+Description: "COMPRESSOR 2 CENTRAL MODE ENABLE BIT (1 = CENTRAL) "
+
+Addr: N26
+Slot: 1
+Terminal: 5
+Description: "COMPRESSOR 2 LOCAL MODE ENABLE BIT (1 = LOCAL) "
+
+Addr: N26
+Slot: 2
+Terminal: 0
+Description: "COMPRESSOR 3 STOP COMMAND ENABLE BIT (1 = STOP) "
+
+Addr: N26
+Slot: 2
+Terminal: 1
+Description: "COMPRESSOR 3 AUTO MODE ENABLE BIT (1 = AUTO) "
+
+Addr: N26
+Slot: 2
+Terminal: 4
+Description: "COMPRESSOR 3 CENTRAL MODE ENABLE BIT (1 = CENTRAL) "
+
+Addr: N26
+Slot: 2
+Terminal: 5
+Description: "COMPRESSOR 3 LOCAL MODE ENABLE BIT (1 = LOCAL) "
+
+Addr: O
+Slot: 1
+Terminal: 0
+Description: "MODBUS MODULE REGISTER TRANSFER DONE BIT  "
+
+Addr: O
+Slot: 6
+Terminal: 0
+Description: "COMPRESSOR #1 START RELAY   "
+
+Addr: O
+Slot: 6
+Terminal: 1
+Description: "COMPRESSOR #1 66% UNLOADING   "
+
+Addr: O
+Slot: 6
+Terminal: 2
+Description: "COMPRESSOR #1 33% UNLOADING   "
+
+Addr: O
+Slot: 6
+Terminal: 3
+Description: "COMPRESSOR 2 REMOTE MODE START/STOP SIGNAL "
+
+Addr: O
+Slot: 6
+Terminal: 4
+Description: "COMPRESSOR 3 REMOTE MODE START/STOP SIGNAL "
+
+Addr: O
+Slot: 6
+Terminal: 5
+Description: "    "
+
+Addr: O
+Slot: 6
+Terminal: 6
+Description: "CONDENSER PUMP #1 ON SIGNAL  "
+
+Addr: O
+Slot: 6
+Terminal: 7
+Description: "CONDENSER PUMP #2 ON SIGNAL  "
+
+Addr: O
+Slot: 6
+Terminal: 8
+Description: "CONDENSER FAN ON SIGNAL  "
+
+Addr: O
+Slot: 6
+Terminal: 9
+Description: "FREEZER #1 FAN OUTPUT   "
+
+Addr: O
+Slot: 6
+Terminal: 10
+Description: "FREEZER #1 LIQUID SOLENOID   "
+
+Addr: O
+Slot: 6
+Terminal: 11
+Description: "FREEZER #1 HOT GAS SOLENOID  "
+
+Addr: O
+Slot: 6
+Terminal: 12
+Description: "FREEZER #1 HOT GAS PILOT SOLENOID  "
+
+Addr: O
+Slot: 6
+Terminal: 13
+Description: "FREEZER #1 BLOWDOWN SOLENOID  "
+
+Addr: O
+Slot: 6
+Terminal: 14
+Description: "FREEZER #1 FAN OUTPUT   "
+
+Addr: O
+Slot: 6
+Terminal: 15
+Description: "FREEZER #2 LIQUID SOLENOID   "
+
+Addr: O
+Slot: 7
+Terminal: 0
+Description: "FREEZER #2 HOT GAS SOLENOID   "
+
+Addr: O
+Slot: 7
+Terminal: 1
+Description: "FREEZER #2 HOT GAS PILOT SOLENOID  "
+
+Addr: O
+Slot: 7
+Terminal: 2
+Description: "FREEZER #2 BLOWDOWN SOLENOID   "
+
+Addr: O
+Slot: 7
+Terminal: 3
+Description: "FREEZER #3 FAN OUTPUT   "
+
+Addr: O
+Slot: 7
+Terminal: 4
+Description: "FREEZER #3 LIQUID SOLENOID   "
+
+Addr: O
+Slot: 7
+Terminal: 5
+Description: "FREEZER #3 HOT GAS SOLENOID   "
+
+Addr: O
+Slot: 7
+Terminal: 6
+Description: "FREEZER #3 HOT GAS PILOT SOLENOID  "
+
+Addr: O
+Slot: 7
+Terminal: 7
+Description: "FREEZER #3 BLOWDOWN SOLENOID  "
+
+Addr: O
+Slot: 7
+Terminal: 8
+Description: "FREEZER #4 FAN ON   "
+
+Addr: O
+Slot: 7
+Terminal: 9
+Description: "FREEZER #4 LIQUID SOLENOID   "
+
+Addr: O
+Slot: 7
+Terminal: 10
+Description: "FREEZER #4 HOT GAS SOLENOID   "
+
+Addr: O
+Slot: 7
+Terminal: 11
+Description: "FREEZER #4 HOT GAS PILOT SOLENOID  "
+
+Addr: O
+Slot: 7
+Terminal: 12
+Description: "FREEZER #4 BLOWDOWN SOLENOID  "
+
+Addr: O
+Slot: 8
+Terminal: 7
+Description: "DOCK #1 FAN ON   "
+
+Addr: O
+Slot: 8
+Terminal: 8
+Description: "DOCK #1 LIQUID SOLENOID   "
+
+Addr: O
+Slot: 8
+Terminal: 10
+Description: "DOCK #2 FAN ON   "
+
+Addr: O
+Slot: 8
+Terminal: 11
+Description: "DOCK #2 LIQUID SOLENOID   "
+
+Addr: O
+Slot: 8
+Terminal: 13
+Description: "DOCK #3 FAN ON   "
+
+Addr: O
+Slot: 8
+Terminal: 14
+Description: "DOCK #3 LIQUID SOLENOID   "
+
+Addr: O
+Slot: 9
+Terminal: 0
+Description: "COOLER FAN ON   "
+
+Addr: O
+Slot: 9
+Terminal: 1
+Description: "COOLER LIQUID SOLENOID   "
+
+Addr: O
+Slot: 9
+Terminal: 2
+Description: "COOLER HOT GAS SOLENOID   "
+
+Addr: O
+Slot: 9
+Terminal: 3
+Description: "PALLETIZER FAN ON   "
+
+Addr: O
+Slot: 9
+Terminal: 4
+Description: "PALLETIZER LIQUID SOLENOID   "
+
+Addr: O
+Slot: 9
+Terminal: 5
+Description: "PALLETIZER HOT GAS SOLENOID   "
+
+Addr: O
+Slot: 9
+Terminal: 6
+Description: "LIQUID LINE SOLENOID   "
+
+Addr: O
+Slot: 9
+Terminal: 7
+Description: "KING VALVE    "
+
+Addr: O
+Slot: 9
+Terminal: 8
+Description: "COMPRESSORS TRIP TO PHONE DIALER   "
+
+Addr: O
+Slot: 10
+Terminal: 13
+Description: "SLOT 10 1746-NR8 MOD. CHANNEL 0 CALIBRATE DISABLE SELECT BIT"
+
+Addr: O
+Slot: 10
+Terminal: 29
+Description: "SLOT 10 1746-NR8 MOD. CHANNEL 1 CALIBRATE DISABLE SELECT BIT"
+
+Addr: O
+Slot: 10
+Terminal: 45
+Description: "SLOT 10 1746-NR8 MOD. CHANNEL 2 CALIBRATE DISABLE SELECT BIT"
+
+Addr: O
+Slot: 10
+Terminal: 61
+Description: "SLOT 10 1746-NR8 MOD. CHANNEL 3 CALIBRATE DISABLE SELECT BIT"
+
+Addr: O
+Slot: 10
+Terminal: 77
+Description: "SLOT 10 1746-NR8 MOD. CHANNEL 4 CALIBRATE DISABLE SELECT BIT"
+
+Addr: O
+Slot: 10
+Terminal: 93
+Description: "SLOT 10 1746-NR8 MOD. CHANNEL 5 CALIBRATE DISABLE SELECT BIT"
+
+Addr: O
+Slot: 10
+Terminal: 109
+Description: "SLOT 10 1746-NR8 MOD. CHANNEL 6 CALIBRATE DISABLE SELECT BIT"
+
+Addr: O
+Slot: 10
+Terminal: 125
+Description: "SLOT 10 1746-NR8 MOD. CHANNEL 7 CALIBRATE DISABLE SELECT BIT"
+
+Addr: O
+Slot: 16
+Terminal: 0
+Description: "AU-1A FANS    "
+
+Addr: O
+Slot: 16
+Terminal: 1
+Description: "AU-1A LIQUID SV   "
+
+Addr: O
+Slot: 16
+Terminal: 2
+Description: "AU-1A +10 DEG SUCTION SV   "
+
+Addr: O
+Slot: 16
+Terminal: 3
+Description: "AU-1A -25 DEG PR. PILOT SV  "
+
+Addr: O
+Slot: 16
+Terminal: 4
+Description: "AU-1A BLEED PILOT SV   "
+
+Addr: O
+Slot: 16
+Terminal: 5
+Description: "AU-1A HOT GAS SV   "
+
+Addr: O
+Slot: 16
+Terminal: 6
+Description: "AU-1A EQUALIZING SV   "
+
+Addr: S
+Slot: 0
+Terminal: 0
+Description: "Processor Arithmetic Carry Flag "
+
+Addr: S
+Slot: 0
+Terminal: 1
+Description: "Processor Arithmetic Underflow/ Overflow Flag"
+
+Addr: S
+Slot: 0
+Terminal: 2
+Description: "Processor Arithmetic Zero Flag "
+
+Addr: S
+Slot: 0
+Terminal: 3
+Description: "Processor Arithmetic Sign Flag "
+
+Addr: S
+Slot: 1
+Terminal: 0
+Description: "Processor Mode Bit 0  "
+
+Addr: S
+Slot: 1
+Terminal: 1
+Description: "Processor Mode Bit 1  "
+
+Addr: S
+Slot: 1
+Terminal: 2
+Description: "Processor Mode Bit 2  "
+
+Addr: S
+Slot: 1
+Terminal: 3
+Description: "Processor Mode Bit 3  "
+
+Addr: S
+Slot: 1
+Terminal: 4
+Description: "Processor Mode Bit 4  "
+
+Addr: S
+Slot: 1
+Terminal: 5
+Description: "Forces Enabled   "
+
+Addr: S
+Slot: 1
+Terminal: 6
+Description: "Forces Present   "
+
+Addr: S
+Slot: 1
+Terminal: 7
+Description: "Comms Active   "
+
+Addr: S
+Slot: 1
+Terminal: 8
+Description: "Fault Override at Powerup  "
+
+Addr: S
+Slot: 1
+Terminal: 9
+Description: "Startup Protection Fault  "
+
+Addr: S
+Slot: 1
+Terminal: 10
+Description: "Load Memory Module on Memory Error"
+
+Addr: S
+Slot: 1
+Terminal: 11
+Description: "Load Memory Module Always "
+
+Addr: S
+Slot: 1
+Terminal: 12
+Description: "Load Memory Module and RUN "
+
+Addr: S
+Slot: 1
+Terminal: 13
+Description: "Major Error Halted  "
+
+Addr: S
+Slot: 1
+Terminal: 14
+Description: "Access Denied   "
+
+Addr: S
+Slot: 1
+Terminal: 15
+Description: "First Pass    "
+
+Addr: S
+Slot: 2
+Terminal: 0
+Description: "STI Pending   "
+
+Addr: S
+Slot: 2
+Terminal: 1
+Description: "STI Enabled   "
+
+Addr: S
+Slot: 2
+Terminal: 2
+Description: "STI Executing   "
+
+Addr: S
+Slot: 2
+Terminal: 3
+Description: "Index Addressing File Range  "
+
+Addr: S
+Slot: 2
+Terminal: 4
+Description: "Saved with Debug Single Step "
+
+Addr: S
+Slot: 2
+Terminal: 5
+Description: "DH-485 Incoming Command Pending "
+
+Addr: S
+Slot: 2
+Terminal: 6
+Description: "DH-485 Message Reply Pending "
+
+Addr: S
+Slot: 2
+Terminal: 7
+Description: "DH-485 Outgoing Message Command Pending"
+
+Addr: S
+Slot: 2
+Terminal: 15
+Description: "Comms Servicing Selection  "
+
+Addr: S
+Slot: 5
+Terminal: 0
+Description: "Overflow Trap   "
+
+Addr: S
+Slot: 5
+Terminal: 2
+Description: "Control Register Error  "
+
+Addr: S
+Slot: 5
+Terminal: 3
+Description: "Major Err Detected Executing UserFault Routine"
+
+Addr: S
+Slot: 5
+Terminal: 4
+Description: "M0-M1 Referenced on Disabled Slot"
+
+Addr: S
+Slot: 5
+Terminal: 8
+Description: "Memory Module Boot  "
+
+Addr: S
+Slot: 5
+Terminal: 9
+Description: "Memory Module Password Mismatch "
+
+Addr: S
+Slot: 5
+Terminal: 10
+Description: "STI Overflow   "
+
+Addr: S
+Slot: 5
+Terminal: 11
+Description: "Battery Low   "
+
+Addr: S
+Slot: 33
+Terminal: 0
+Description: "Incoming Command Pending  "
+
+Addr: S
+Slot: 33
+Terminal: 1
+Description: "Message Reply Pending  "
+
+Addr: S
+Slot: 33
+Terminal: 2
+Description: "Outgoing Message Command Pending "
+
+Addr: S
+Slot: 33
+Terminal: 3
+Description: "Selection Status User/DF1  "
+
+Addr: S
+Slot: 33
+Terminal: 4
+Description: "Communicat Active   "
+
+Addr: S
+Slot: 33
+Terminal: 5
+Description: "Communicat Servicing Selection  "
+
+Addr: S
+Slot: 33
+Terminal: 6
+Description: "Message Servicing Selection Channel 0 "
+
+Addr: S
+Slot: 33
+Terminal: 7
+Description: "Message Servicing Selection Channel 1 "
+
+Addr: S
+Slot: 33
+Terminal: 8
+Description: "Interrupt Latency Control Flag "
+
+Addr: S
+Slot: 33
+Terminal: 9
+Description: "Scan Toggle Flag  "
+
+Addr: S
+Slot: 33
+Terminal: 10
+Description: "Discrete Input Interrupt Reconfigur Flag"
+
+Addr: S
+Slot: 33
+Terminal: 11
+Description: "Online Edit Status  "
+
+Addr: S
+Slot: 33
+Terminal: 12
+Description: "Online Edit Status  "
+
+Addr: S
+Slot: 33
+Terminal: 13
+Description: "Scan Time Timebase Selection  "
+
+Addr: S
+Slot: 33
+Terminal: 14
+Description: "DTR Control Bit  "
+
+Addr: S
+Slot: 33
+Terminal: 15
+Description: "DTR Force Bit   "
+
+Addr: S
+Slot: 34
+Terminal: 0
+Description: "Pass-Thru Disabled Flag  "
+
+Addr: S
+Slot: 34
+Terminal: 1
+Description: "DH+ Active Node Table Enable Flag "
+
+Addr: S
+Slot: 34
+Terminal: 2
+Description: "Floating Point Math Flag Disable "
+
+Addr: S
+Slot: 36
+Terminal: 8
+Description: "Dll Lost    "
+
+Addr: S
+Slot: 36
+Terminal: 9
+Description: "STI Lost    "
+
+Addr: S
+Slot: 36
+Terminal: 10
+Description: "Memory Module Data File Overwrite Protection"
+
+Addr: T4
+Slot: 34
+Terminal: DN
+Description: "COMPRESSOR 2 CANNOT REACH MAX. CAPACITY DELAY TIMER "
+
+Addr: T4
+Slot: 35
+Terminal: DN
+Description: "COMPRESSOR 3 CANNOT REACH MAX. CAPACITY DELAY TIMER "
+

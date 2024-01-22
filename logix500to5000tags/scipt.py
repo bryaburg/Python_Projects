@@ -60,18 +60,3 @@ df_formatted = pd.DataFrame({formatted_rows_new_with_specific_terminal})
 # Saving the formatted data to a CSV file
 output_path = r'C:\Users\bburgess\Desktop\Python_Projects\logix500to5000tags\K45791_01_17_2024-Controller-Tags copy.CSV'
 df_formatted.to_csv(output_path, index=False, quoting=csv.QUOTE_ALL)
-
-
-
-"""Quick Bash script for ouput
-for x in $(seq 1 $(wc -l K45791_01_17_2024_Comments.CSV | cut -f1 -d" "))
-do
-    line=$(cat K45791_01_17_2024_Comments.CSV | head -n +"$x" | tail -n 1)
-    iostr=$(echo "$line" | cut -f1 -d,)
-    desc=$(echo "$line" | cut -f4 -d,)
-    ioaddr=$(echo "$iostr" | cut -f1 -d":")
-    ioslot=$(echo "$iostr" | cut -f2 -d":" | cut -f1 -d"/")
-    ioterminal=$(echo "$iostr" | cut -f2 -d":" | cut -f2 -d"/")
-    printf "Addr: %s\nSlot: %s\nTerminal: %s\nDescription: %s\n" "$ioaddr" "$ioslot" "$ioterminal" "$desc"
-done
-"""
