@@ -1,48 +1,62 @@
 import pandas as pd
 import csv
-import re
 
-logix500tags = r'C:\Users\Windows\Desktop\Python_Projects\logix500to5000tags\logix500template.csv'
+# Function to parse the tag and extract slot, data type, and terminal
+def parse_tag_corrected(tag):
+    try:
+        parts = tag.split(':')
+        if len(parts) == 2:
+            data_type = parts[0]
+            slot_terminal = parts[1].split('/')
+            if len(slot_terminal) == 2:
+                slot, terminal = slot_terminal
+                return slot, data_type, terminal
+    except Exception:
+        return None, None, None
+    return None, None, None
 
-try:
-    df = pd.read_csv(logix500tags)
+# Function to format a row for the new structure with comments based on each tag's terminal
+def format_row_with_specific_terminal(tag, description):
+    slot, data_type, terminal = parse_tag_corrected(tag)
+    if slot and data_type and terminal:
+        formatted_rows = []
+        # TAG lines
+        tag_line_c = f'TAG,,Local:{slot}:C,"","AB:1756_D{data_type}:C:1","","(ExternalAccess := Read/Write)"'
+        tag_line_data_type = f'TAG,,Local:{slot}:{data_type},"","AB:1756_D{data_type}:{data_type}:0","","(ExternalAccess := Read/Write)"'
+        formatted_rows.extend([tag_line_c, tag_line_data_type])
 
-    #'I:{slot}/{terminal}' or 'O:{slot}/{terminal}' format
-    def is_valid_io_type(type_value):
-        return re.match(r'[IO]:\d+/\d+', type_value)
+        # Determine the number of COMMENT lines based on the terminal number
+        try:
+            terminal_number = int(terminal)
+            comment_range = range(terminal_number + 1)
+        except ValueError:
+            # If terminal is not a number, skip adding comment lines
+            comment_range = []
 
-    def create_formatted_rows(df, max_terminals=16):
-        new_rows = []
-        comment_positions = {}
+        # Adding the COMMENT lines
+        for i in comment_range:
+            comment_line = f'COMMENT,,Local:{slot}:{data_type},"{description.strip()}",,"Local:{slot}:{data_type}.DATA.{i}"'
+            formatted_rows.append(comment_line)
+        
+        return formatted_rows
+    else:
+        return []
 
-        for index, row in df.iterrows():
-            if is_valid_io_type(row['TYPE']):
-                io_type, slot_terminal = row['TYPE'].split(':')
-                slot, terminal = slot_terminal.split('/')
-                local_name = f'Local:{slot}:{io_type}'
+# Read the 'Comments.csv' file
+df_comments = pd.read_csv(r'C:\Users\bburgess\Desktop\Python_Projects\logix500to5000tags\K45791_01_17_2024_Comments.CSV')
 
-                if local_name not in comment_positions:
-                    tag_row = ['TAG', '', local_name, '', f'AB:1756_DI:{io_type}:0', '', '(ExternalAccess := Read/Write)']
-                    new_rows.append(tag_row)
-                    comment_positions[local_name] = len(new_rows)
+# Header for the new format
+header_new = 'TYPE,SCOPE,NAME,DESCRIPTION,DATATYPE,SPECIFIER,ATTRIBUTES'
 
-                description = row['DESCRIPTION'].strip('"') if row['DESCRIPTION'] else "SPARE"
-                comment_row = ['COMMENT', '', local_name, description, f'{local_name}.DATA.{terminal}', '', '']
-                new_rows.append(comment_row)
-                comment_positions[local_name] = len(new_rows)
+# Re-formatting the rows for the new format with comments based on each tag's terminal
+formatted_rows_new_with_specific_terminal = [header_new]
+for _, row in df_comments.iterrows():
+    tag, description = row[0], row[3]
+    formatted_rows_new_with_specific_terminal.extend(format_row_with_specific_terminal(tag, description))
 
-        for local_name, position in comment_positions.items():
-            existing_terminals = {int(row[4].split('.')[2]) for row in new_rows if row[2] == local_name and row[0] == 'COMMENT'}
-            for t in range(max_terminals):
-                if t not in existing_terminals:
-                    spare_comment_row = ['COMMENT', '', local_name, 'SPARE', f'{local_name}.DATA.{t}', '', '']
-                    new_rows.insert(position + t - len(existing_terminals), spare_comment_row)
+# Creating a DataFrame from the new formatted rows
+df_formatted = pd.DataFrame({formatted_rows_new_with_specific_terminal})
 
-        return pd.DataFrame(new_rows, columns=["TYPE", "SCOPE", "NAME", "DESCRIPTION", "DATATYPE", "SPECIFIER", "ATTRIBUTES"])
-
-    df_new = create_formatted_rows(df)
-
-    df_new.to_csv(r'C:\Users\Windows\Desktop\Python_Projects\logix500to5000tags\studio5000rev.csv', index=False, quoting=csv.QUOTE_ALL)
-
-except FileNotFoundError:
-    print(f"File '{logix500tags}' not found.")
+# Saving the formatted data to a CSV file
+output_path = r'C:\Users\bburgess\Desktop\Python_Projects\logix500to5000tags\K45791_01_17_2024-Controller-Tags copy.CSV'
+df_formatted.to_csv(output_path, index=False, quoting=csv.QUOTE_ALL)
