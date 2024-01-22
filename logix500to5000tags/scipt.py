@@ -1,7 +1,7 @@
 import pandas as pd
 import csv
 
-# Function to parse the tag and extract slot, data type, and terminal
+# Function to parse the tag and extract slot, data type, and terminal  ALso needs description added 
 def parse_tag_corrected(tag):
     try:
         parts = tag.split(':')
