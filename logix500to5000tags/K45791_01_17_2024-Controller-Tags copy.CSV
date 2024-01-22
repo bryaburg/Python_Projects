@@ -1,4 +1,3 @@
-"FormattedData"
 "TYPE,SCOPE,NAME,DESCRIPTION,DATATYPE,SPECIFIER,ATTRIBUTES"
 "TAG,,Local:2:C,"""",""AB:1756_DI:C:1"","""",""(ExternalAccess := Read/Write)"""
 "TAG,,Local:2:I,"""",""AB:1756_DI:I:0"","""",""(ExternalAccess := Read/Write)"""
