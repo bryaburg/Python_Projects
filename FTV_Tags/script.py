@@ -62,11 +62,8 @@ regex_patterns = {
 
 datatypes = {
     'I': {'array': [''], 'bit': ['']},
-
     'O': {'array': [''], 'bit': ['']},
-
     'B3': {'array': [''], 'bit': ['']},
-
     'N7': {'array': [''], 'bit': ['']},
     'N11': {'array': [''], 'bit': ['']},
     'N12': {'array': [''], 'bit': ['']},
@@ -74,11 +71,8 @@ datatypes = {
     'N16': {'array': [''], 'bit': ['']},
     'N25': {'array': [''], 'bit': ['']},
     'N26': {'array': [''], 'bit': ['']},
-
     'S': {'array': [''], 'bit': ['']},
-    
     'T4': {'array': [''], 'bit': ['PRE']},
-
     'C5': {'array': [''], 'bit': ['ACC']}   
 
 }
