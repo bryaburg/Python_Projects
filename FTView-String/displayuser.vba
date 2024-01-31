@@ -1,0 +1,1 @@
+If (CurrentUserName(  ) = "DEFAULT") Then "None" Else CurrentUserName(  )
