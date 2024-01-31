@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 
 '''
 #Old style {datatype}:{array}.{bit}
@@ -40,8 +41,55 @@ csv = r"C:\Users\bburgess\OneDrive - ESCO\Desktop\Python_Projects\FTV_Tags\Heinz
 
 df = pd.read_csv(csv, sep=',', skipinitialspace=True)
 
-datatypes = ['T4','I','0','N7','N11','N12','N15','N16','N25','N26','B3','C5', 'S']
-array = ['']
-bit = ['','PRE']
+df = df.dropna(subset=['Address'])
 
-print(df.loc[:,["Address"]])
+regex_patterns = {
+    'I': r'::\[[a-zA-Z0-9]+\]I:\d+/\d+',
+    'O': r'::\[[a-zA-Z0-9]+\]O:\d+/\d+',
+    'B3': r'\[k45791\]B3/\d+',
+    'N7': r'::\[[a-zA-Z0-9]+\]N\d+:\d+',
+    'N11': r'::\[[a-zA-Z0-9]+\]N\d+:\d+',
+    'N12': r'::\[[a-zA-Z0-9]+\]N\d+:\d+',
+    'N15': r'::\[[a-zA-Z0-9]+\]N\d+:\d+',
+    'N16': r'::\[[a-zA-Z0-9]+\]N\d+:\d+',
+    'N25': r'::\[[a-zA-Z0-9]+\]N\d+:\d+',
+    'N26': r'::\[[a-zA-Z0-9]+\]N\d+:\d+',
+    'S': r'',
+    'T4': r'::\[[a-zA-Z0-9]+\]T4:\d+\.[A-Z]+',
+    'C5': r'::\[[a-zA-Z0-9]+\]C5:\d+\.ACC'
+}
+
+
+datatypes = {
+    'I': {'array': [''], 'bit': ['']},
+
+    'O': {'array': [''], 'bit': ['']},
+
+    'B3': {'array': [''], 'bit': ['']},
+
+    'N7': {'array': [''], 'bit': ['']},
+    'N11': {'array': [''], 'bit': ['']},
+    'N12': {'array': [''], 'bit': ['']},
+    'N15': {'array': [''], 'bit': ['']},
+    'N16': {'array': [''], 'bit': ['']},
+    'N25': {'array': [''], 'bit': ['']},
+    'N26': {'array': [''], 'bit': ['']},
+
+    'S': {'array': [''], 'bit': ['']},
+    
+    'T4': {'array': [''], 'bit': ['PRE']},
+
+    'C5': {'array': [''], 'bit': ['ACC']}   
+
+}
+
+N = 237
+bits_per_word = 16
+
+def calculate_B3(N, bits_per_word):
+    array_index = N // bits_per_word
+    bit_index = N % bits_per_word
+    print(f"B3[{array_index}].{bit_index}")
+    return(f"B3[{array_index}].{bit_index}")
+
+calculate_B3(N, bits_per_word)
