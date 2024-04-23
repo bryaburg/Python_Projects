@@ -58,6 +58,99 @@ def simple_write_tag():
     else:
         print("Invalid mode selected.")
 
+def get_controller_tag_list():
+    PLCIP = input("Enter PLC IP Address: ")
+    with PLC() as comm:
+        comm.IPAddress = PLCIP
+        tags = comm.GetTagList(False)
+    for t in tags.Value:
+        print(t.TagName)
+
+def get_program_tag_list():
+    PLCIP = input("Enter PLC IP Address: ")
+    program_name = input("Enter the program name to get tags from: ")
+    with PLC() as comm:
+        comm.IPAddress = PLCIP
+        tags = comm.GetProgramTagList(f'Program:{program_name}')
+    for t in tags.Value:
+        print(t.TagName, t.DataType)
+
+def device_discovery():
+    with PLC() as comm:
+        devices = comm.Discover()
+    if devices.Value:
+        for device in devices.Value:
+            print(f"IP Address: {device.IPAddress}")
+            print(f"  Product Code: {device.ProductName} {device.ProductCode}")
+            print(f"  Vendor/Device ID: {device.Vendor} {device.DeviceID}")
+            print(f"  Revision/Serial: {device.Revision} {device.SerialNumber}")
+            print('')
+    else:
+        print("No devices discovered on the network.")
+
+def save_tag_list():
+    PLCIP = input("Enter PLC IP Address: ")
+    with PLC() as comm:
+        comm.IPAddress = PLCIP
+        tags = comm.GetTagList()
+
+    with open('tag_list.txt', 'w') as f:
+        for t in tags.Value:
+            f.write('{} {}\n'.format(t.TagName, t.DataType))
+            print(t.TagName)
+
+def get_module_properties():
+    PLCIP = input("Enter PLC IP Address: ")
+    with PLC() as comm:
+        comm.IPAddress = PLCIP
+        prop = comm.GetModuleProperties(0)
+        print(prop.Value.ProductName, prop.Value.Revision)
+
+class audit_network:
+
+    known_plc_types = {
+        14: "ControlLogix",
+        # Add other known DeviceIDs and their types here
+    }
+
+    @staticmethod
+    def is_plc(device):
+        return device.DeviceID in audit_network.known_plc_types
+
+    @staticmethod
+    def get_max_slots(device_type):
+        if device_type == "ControlLogix":
+            return 17
+        return 10
+
+    @staticmethod
+    def get_devices():
+        with PLC() as comm:
+            return comm.Discover()
+
+    @staticmethod
+    def audit_controllers():
+        devices = audit_network.get_devices()
+        with open('network_audit.txt', 'w') as f:
+            for d in devices.Value:
+                if audit_network.is_plc(d):
+                    device_type = audit_network.known_plc_types.get(d.DeviceID, "Unknown")
+                    audit_network.audit_rack(d, f, device_type)
+                else:
+                    f.write(f'{d.ProductName} {d.Revision}\n')
+
+    @staticmethod
+    def audit_rack(plc, f, device_type):
+        max_slots = audit_network.get_max_slots(device_type)
+        with PLC() as c:
+            c.IPAddress = plc.IPAddress
+            f.write(f'{plc.IPAddress} - {plc.ProductName}\n')
+            for i in range(max_slots):
+                x = c.GetModuleProperties(i)
+                if x.ProductName:
+                    f.write(f'\tSlot {i}:{x.ProductName}  rev:{x.Revision}\n')
+            f.write('')
+
 def main():
     while True:
         choice = main_menu()
